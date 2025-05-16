@@ -1,15 +1,15 @@
 import { Image } from "./image";
 import React from "react";
 
+// SERVICIOS - tipos de seguro
 export const Gallery = (props) => {
   return (
     <div id="portfolio" className="text-center">
       <div className="container">
         <div className="section-title">
-          <h2>Gallery</h2>
+          <h2>Nuestros servicios</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-            dapibus leonec.
+            Conocé todos los seguros que tenemos para vos.
           </p>
         </div>
         <div className="row">
@@ -22,7 +22,6 @@ export const Gallery = (props) => {
                   >
                     <Image
                       title={d.title}
-                      largeImage={d.largeImage}
                       smallImage={d.smallImage}
                     />
                   </div>

@@ -1,29 +1,34 @@
 import React from "react";
 
-export const Services = (props) => {
+export const Partners = (props) => {
   return (
     <div id="services" className="text-center">
       <div className="container">
         <div className="section-title">
-          <h2>Our Services</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-            dapibus leonec.
-          </p>
+          <h2>Nuestros aliados</h2>
+          <p>El respaldo de las grandes compañías al servicio de tu seguridad.</p>
         </div>
         <div className="row">
           {props.data
             ? props.data.map((d, i) => (
                 <div key={`${d.name}-${i}`} className="col-md-4">
-                  {" "}
-                  <i className={d.icon}></i>
+                  <img
+                    src={d.icon}
+                    alt={d.name}
+                    style={{
+                      width: "80px",
+                      height: "80px",
+                      objectFit: "contain",
+                      marginBottom: "15px"
+                    }}
+                  />
                   <div className="service-desc">
                     <h3>{d.name}</h3>
                     <p>{d.text}</p>
                   </div>
                 </div>
               ))
-            : "loading"}
+            : "Cargando..."}
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { ReactComponent as Logo } from '../logoTrebol.svg';
 
 export const Navigation = (props) => {
   return (
@@ -18,7 +19,7 @@ export const Navigation = (props) => {
             <span className="icon-bar"></span>{" "}
           </button>
           <a className="navbar-brand page-scroll" href="#page-top">
-            React Landing Page
+            <Logo className="logo" style={{ height: "100px", width: "auto", verticalAlign: "middle" }} />
           </a>{" "}
         </div>
 
@@ -29,37 +30,37 @@ export const Navigation = (props) => {
           <ul className="nav navbar-nav navbar-right">
             <li>
               <a href="#features" className="page-scroll">
-                Features
+                ¿Por qué elegirnos?
               </a>
             </li>
             <li>
               <a href="#about" className="page-scroll">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#services" className="page-scroll">
-                Services
+                Nosotros
               </a>
             </li>
             <li>
               <a href="#portfolio" className="page-scroll">
-                Gallery
+                Servicios
+              </a>
+            </li>
+            <li>
+              <a href="#services" className="page-scroll">
+                Aliados
               </a>
             </li>
             <li>
               <a href="#testimonials" className="page-scroll">
-                Testimonials
+              Testimonios
               </a>
             </li>
             <li>
               <a href="#team" className="page-scroll">
-                Team
+                Equipo
               </a>
             </li>
             <li>
               <a href="#contact" className="page-scroll">
-                Contact
+                Contactanos
               </a>
             </li>
           </ul>

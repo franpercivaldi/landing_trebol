@@ -1,132 +1,117 @@
 {
   "Header": {
-    "title": "We are a Landing Page",
+    "title": "El trebol seguro",
     "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
   },
   "About": {
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "paragraph": "Hace más de 15 años, Josesito Masa fundó nuestra aseguradora con una visión clara: brindar tranquilidad y respaldo a las familias y empresas de nuestra comunidad. Lo que comenzó como una pequeña oficina con un fuerte compromiso humano, se ha transformado en una compañía sólida, reconocida por su cercanía, transparencia y excelencia en el servicio.Hoy, seguimos creciendo con el mismo propósito que nos vio nacer: proteger lo que más importa. Ofrecemos coberturas integrales en salud, vida, vehículos y hogar, con soluciones flexibles y atención personalizada 24/7. Nuestra experiencia nos permite anticiparnos a tus necesidades y acompañarte en cada etapa de tu vida.",
     "Why": [
-      "Lorem ipsum dolor",
-      "Tempor incididunt",
-      "Lorem ipsum dolor",
-      "Incididunt ut labore"
+      "Más de 15 años de experiencia",
+      "Asistencia 24/7 en todo el país",
+      "Planes flexibles y personalizados",
+      "Atención rápida y sin burocracia"
     ],
     "Why2": [
-      "Aliquip ex ea commodo",
-      "Lorem ipsum dolor",
-      "Exercitation ullamco",
-      "Lorem ipsum dolor"
+      "Cobertura familiar completa",
+      "Gestión digital desde nuestra app",
+      "Contratación fácil y rápida",
+      "Miles de clientes nos eligen"
     ]
   },
   "Gallery": [
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/01-large.jpg",
-      "smallImage": "img/portfolio/01-small.jpg"
+      "title": "Seguro automotor",
+      "smallImage": "img/portfolio/seguroAuto.jpg"
     },
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/02-large.jpg",
-      "smallImage": "img/portfolio/02-small.jpg"
+      "title": "Seguro para tu moto",
+      "smallImage": "img/portfolio/seguroMotocicleta.jpg"
     },
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/03-large.jpg",
-      "smallImage": "img/portfolio/03-small.jpg"
+      "title": "Seguro del Hogar",
+      "smallImage": "img/portfolio/seguroHogar.jpg"
     },
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/04-large.jpg",
-      "smallImage": "img/portfolio/04-small.jpg"
+      "title": "Seguro de salud",
+      "smallImage": "img/portfolio/seguroSalud.jpg"
     },
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/05-large.jpg",
-      "smallImage": "img/portfolio/05-small.jpg"
+      "title": "Seguro de taxi",
+      "smallImage": "img/portfolio/seguroTaxi.jpg"
     },
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/06-large.jpg",
-      "smallImage": "img/portfolio/06-small.jpg"
+      "title": "Seguro de viaje",
+      "smallImage": "img/portfolio/seguroViajero.jpg"
     },
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/07-large.jpg",
-      "smallImage": "img/portfolio/07-small.jpg"
+      "title": "Seguro de monopatin",
+      "smallImage": "img/portfolio/seguroMonopatin.jpg"
     },
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/08-large.jpg",
-      "smallImage": "img/portfolio/08-small.jpg"
+      "title": "Seguro de comercio",
+      "smallImage": "img/portfolio/seguroComercio2.jpg"
     },
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/09-large.jpg",
-      "smallImage": "img/portfolio/09-small.jpg"
+      "title": "Seguro de bici",
+      "smallImage": "img/portfolio/seguroBici3.jpg"
     }
   ],
   "Services": [
     {
-      "icon": "fa fa-wordpress",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "partners/medicalWork.jpg",
+      "name": "MedicarWork"
     },
     {
-      "icon": "fa fa-cart-arrow-down",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "partners/mercantilAndina.png",
+      "name": "Mercantil Andina"
     },
     {
-      "icon": "fa fa-cloud-download",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "partners/prudenciaSeguro.jpg",
+      "name": "Prudencia Seguros"
     },
     {
-      "icon": "fa fa-language",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "partners/rusSeguro.png",
+      "name": "Rio Uruguay Seguros"
     },
     {
-      "icon": "fa fa-plane",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "partners/seguroMetal.webp",
+      "name": "Segurometal"
     },
     {
-      "icon": "fa fa-pie-chart",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "partners/triunfoSeguro.webp",
+      "name": "Triunfo Seguros"
     }
   ],
   "Testimonials": [
     {
       "img": "img/testimonials/01.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
+      "text": "\"Excelente atención, envié mensaje de WhatsApp y me respondieron rápido y muy respetuosamente, brindando la información que necesitaba.\"",
+      "name": "Florencia Alaniz"
     },
     {
       "img": "img/testimonials/02.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
+      "text": "\"Productos que se adecúan a la necesidades de los clientes. Muy buena atención.\"",
+      "name": "Fernando perez"
     },
     {
       "img": "img/testimonials/03.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
+      "text": "\"Excelente atención. Buena calidad de venta.\"",
+      "name": "Miguel"
     },
     {
       "img": "img/testimonials/04.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
+      "text": "\"Excelente la atención y el acompañamiento en los servicios.\"",
+      "name": "Lucia Depretto"
     },
     {
       "img": "img/testimonials/05.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
+      "text": "\"Buena atención aseguraron el auto en 15min.\"",
+      "name": "Franco b"
     },
     {
       "img": "img/testimonials/06.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
+      "text": "\"Excelente atención... rápido y preciso. Evacuaron todas mis dudas.\"",
+      "name": "Malena Fernandez"
     }
   ],
   "Team": [
@@ -152,33 +137,32 @@
     }
   ],
   "Contact": {
-    "address": "4321 California St, San Francisco, CA 12345 ",
-    "phone": "+1 123 456 1234",
-    "email": "info@company.com",
-    "facebook": "fb.com",
-    "twitter": "twitter.com",
-    "youtube": "youtube.com"
+    "address": "Avenida Bodereau 9498, X5000 Córdoba",
+    "phone": "03512780483",
+    "email": "eltrebolseguros@gmail.com",
+    "facebook": "https://www.facebook.com/eltrebolorganizacion/?locale=ms_MY",
+    "instagram": "https://www.instagram.com/eltrebolorganizacion/?hl=es"
   },
   "Features": [
     {
-      "icon": "fa fa-comments-o",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "icon": "fa fa-shield",
+      "title": "Protección integral",
+      "text": "Coberturas completas para salud, vida, auto y hogar, diseñadas para brindarte tranquilidad en todo momento."
     },
     {
-      "icon": "fa fa-bullhorn",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "icon": "fa fa-clock-o",
+      "title": "Atención 24/7",
+      "text": "Soporte personalizado y disponible en todo momento para ayudarte cuando más lo necesites."
     },
     {
-      "icon": "fa fa-group",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "icon": "fa fa-money",
+      "title": "Planes flexibles",
+      "text": "Elige entre múltiples opciones adaptadas a tus necesidades y presupuesto, sin comprometer la protección."
     },
     {
-      "icon": "fa fa-magic",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "icon": "fa fa-briefcase",
+      "title": "Más de 15 años de experiencia",
+      "text": "Confianza respaldada por casi 2 décadas de trayectoria protegiendo a miles de familias y empresas."
     }
   ]
 }
