@@ -1,5 +1,5 @@
 @media screen and (max-width: 400px) {
-  #features {
+  #benefits {
     padding: 20px;
     width: 111%;
   }
@@ -12,7 +12,7 @@
     width: 111%;
   }
 
-  #portfolio {
+  #our-services {
     width: 110%;
   }
 }

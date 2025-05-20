@@ -21,39 +21,39 @@
   "Gallery": [
     {
       "title": "Seguro automotor",
-      "smallImage": "img/portfolio/seguroAuto.jpg"
+      "smallImage": "img/our-services/seguroAuto.jpg"
     },
     {
       "title": "Seguro para tu moto",
-      "smallImage": "img/portfolio/seguroMotocicleta.jpg"
+      "smallImage": "img/our-services/seguroMotocicleta.jpg"
     },
     {
       "title": "Seguro del Hogar",
-      "smallImage": "img/portfolio/seguroHogar.jpg"
+      "smallImage": "img/our-services/seguroHogar.jpg"
     },
     {
       "title": "Seguro de salud",
-      "smallImage": "img/portfolio/seguroSalud.jpg"
+      "smallImage": "img/our-services/seguroSalud.jpg"
     },
     {
       "title": "Seguro de taxi",
-      "smallImage": "img/portfolio/seguroTaxi.jpg"
+      "smallImage": "img/our-services/seguroTaxi.jpg"
     },
     {
       "title": "Seguro de viaje",
-      "smallImage": "img/portfolio/seguroViajero.jpg"
+      "smallImage": "img/our-services/seguroViajero.jpg"
     },
     {
       "title": "Seguro de monopatin",
-      "smallImage": "img/portfolio/seguroMonopatin.jpg"
+      "smallImage": "img/our-services/seguroMonopatin.jpg"
     },
     {
       "title": "Seguro de comercio",
-      "smallImage": "img/portfolio/seguroComercio2.jpg"
+      "smallImage": "img/our-services/seguroComercio2.jpg"
     },
     {
       "title": "Seguro de bici",
-      "smallImage": "img/portfolio/seguroBici3.jpg"
+      "smallImage": "img/our-services/seguroBici3.jpg"
     }
   ],
   "Services": [
@@ -85,32 +85,32 @@
   "Testimonials": [
     {
       "img": "img/testimonials/01.jpg",
-      "text": "\"Excelente atención, envié mensaje de WhatsApp y me respondieron rápido y muy respetuosamente, brindando la información que necesitaba.\"",
+      "text": "Excelente atención, envié mensaje de WhatsApp y me respondieron rápido y muy respetuosamente, brindando la información que necesitaba.",
       "name": "Florencia Alaniz"
     },
     {
       "img": "img/testimonials/02.jpg",
-      "text": "\"Productos que se adecúan a la necesidades de los clientes. Muy buena atención.\"",
+      "text": "Productos que se adecúan a la necesidades de los clientes. Muy buena atención.",
       "name": "Fernando perez"
     },
     {
       "img": "img/testimonials/03.jpg",
-      "text": "\"Excelente atención. Buena calidad de venta.\"",
+      "text": "Excelente atención. Buena calidad de venta.",
       "name": "Miguel"
     },
     {
       "img": "img/testimonials/04.jpg",
-      "text": "\"Excelente la atención y el acompañamiento en los servicios.\"",
+      "text": "Excelente la atención y el acompañamiento en los servicios.",
       "name": "Lucia Depretto"
     },
     {
       "img": "img/testimonials/05.jpg",
-      "text": "\"Buena atención aseguraron el auto en 15min.\"",
+      "text": "Buena atención aseguraron el auto en 15min.",
       "name": "Franco b"
     },
     {
       "img": "img/testimonials/06.jpg",
-      "text": "\"Excelente atención... rápido y preciso. Evacuaron todas mis dudas.\"",
+      "text": "Excelente atención... rápido y preciso. Evacuaron todas mis dudas.",
       "name": "Malena Fernandez"
     }
   ],
@@ -143,7 +143,7 @@
     "facebook": "https://www.facebook.com/eltrebolorganizacion/?locale=ms_MY",
     "instagram": "https://www.instagram.com/eltrebolorganizacion/?hl=es"
   },
-  "Features": [
+  "Benefits": [
     {
       "icon": "fa fa-shield",
       "title": "Protección integral",

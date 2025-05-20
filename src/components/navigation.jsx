@@ -23,7 +23,7 @@ export const Navigation = (props) => {
         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul className="nav navbar-nav navbar-right">
             <li>
-              <a href="#features" className="page-scroll">
+              <a href="#benefits" className="page-scroll">
                 ¿Por qué elegirnos?
               </a>
             </li>
@@ -33,7 +33,7 @@ export const Navigation = (props) => {
               </a>
             </li>
             <li>
-              <a href="#portfolio" className="page-scroll">
+              <a href="#our-services" className="page-scroll">
                 Servicios
               </a>
             </li>

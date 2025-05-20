@@ -244,11 +244,12 @@ header .intro-text {
   padding-bottom: 200px;
   text-align: center;
 }
-/* Features Section */
-#features {
+/* Benefits Section */
+#benefits {
+  padding: 100px 0;
   background: #f6f6f6;
 }
-#features i.fa {
+#benefits i.fa {
   font-size: 38px;
   margin-bottom: 20px;
   transition: all 0.5s;
@@ -351,14 +352,15 @@ header .intro-text {
   margin-bottom: 40px;
 }
 /* Portfolio Section */
-#portfolio {
+#our-services {
   padding: 100px 0;
+  background: #f6f6f6;
 }
-.portfolio-item {
+.our-services-item {
   margin: 1px -15px 0 -14px;
   padding: 0;
 }
-.portfolio-item .hover-bg {
+.our-services-item .hover-bg {
   overflow: hidden;
   position: relative;
   margin: 0;
@@ -393,6 +395,7 @@ header .intro-text {
 .hover-bg:hover .hover-text > h4 {
   opacity: 1;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
@@ -457,6 +460,12 @@ header .intro-text {
   padding: 10px 0 0;
   color: #888;
 }
+/* Visit Us Section */
+#visit-us {
+  padding: 100px 0;
+  background: #f6f6f6;
+}
+
 /* Contact Section */
 #contact {
   padding: 100px 0 60px;
