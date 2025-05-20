@@ -1,5 +1,4 @@
-import React from "react";
-import { ReactComponent as Logo } from '../logoTrebol.svg';
+import { ReactComponent as Logo } from "../logoTrebol.svg";
 
 export const Navigation = (props) => {
   return (
@@ -13,20 +12,15 @@ export const Navigation = (props) => {
             data-target="#bs-example-navbar-collapse-1"
           >
             {" "}
-            <span className="sr-only">Toggle navigation</span>{" "}
-            <span className="icon-bar"></span>{" "}
-            <span className="icon-bar"></span>{" "}
-            <span className="icon-bar"></span>{" "}
+            <span className="sr-only">Toggle navigation</span> <span className="icon-bar"></span>{" "}
+            <span className="icon-bar"></span> <span className="icon-bar"></span>{" "}
           </button>
           <a className="navbar-brand page-scroll" href="#page-top">
             <Logo className="logo" style={{ height: "100px", width: "auto", verticalAlign: "middle" }} />
           </a>{" "}
         </div>
 
-        <div
-          className="collapse navbar-collapse"
-          id="bs-example-navbar-collapse-1"
-        >
+        <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul className="nav navbar-nav navbar-right">
             <li>
               <a href="#features" className="page-scroll">
@@ -50,7 +44,7 @@ export const Navigation = (props) => {
             </li>
             <li>
               <a href="#testimonials" className="page-scroll">
-              Testimonios
+                Testimonios
               </a>
             </li>
             <li>

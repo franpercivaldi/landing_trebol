@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { Navigation } from "./components/navigation";
-import { Header } from "./components/header";
-import { Features } from "./components/features";
-import { About } from "./components/about";
-import { Partners } from "./components/partners";
-import { Gallery } from "./components/gallery";
-import { Testimonials } from "./components/testimonials";
-import { Team } from "./components/Team";
-import { Contact } from "./components/contact";
-import JsonData from "./data/data.json";
+import { useEffect, useState } from "react";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
+import { Team } from "./components/Team";
+import { About } from "./components/about";
+import { Contact } from "./components/contact";
+import { Features } from "./components/features";
+import { Gallery } from "./components/gallery";
+import { Header } from "./components/header";
+import { Navigation } from "./components/navigation";
+import { Partners } from "./components/partners";
+import { Testimonials } from "./components/testimonials";
+import JsonData from "./data/data.json";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,

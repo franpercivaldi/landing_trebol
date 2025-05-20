@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Testimonials = (props) => {
   return (
     <div id="testimonials">
@@ -19,7 +17,6 @@ export const Testimonials = (props) => {
                       flexDirection: "row",
                       alignItems: "flex-start",
                       gap: "15px",
-                      
                     }}
                   >
                     <div className="testimonial-image">
@@ -30,7 +27,7 @@ export const Testimonials = (props) => {
                           width: "60px",
                           height: "60px",
                           borderRadius: "50%",
-                          objectFit: "cover"
+                          objectFit: "cover",
                         }}
                       />
                     </div>

@@ -1,14 +1,10 @@
-import React from "react";
-
 export const Team = (props) => {
   return (
     <div id="team" className="text-center">
       <div className="container">
         <div className="col-md-8 col-md-offset-2 section-title">
           <h2>Nuestro equipo</h2>
-          <p>
-            Detrás de cada cobertura, hay personas listas para ayudarte con profesionalismo, cercanía y compromiso.
-          </p>
+          <p>Detrás de cada cobertura, hay personas listas para ayudarte con profesionalismo, cercanía y compromiso.</p>
         </div>
         <div id="row">
           {props.data

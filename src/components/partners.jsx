@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Partners = (props) => {
   return (
     <div id="services" className="text-center">
@@ -19,7 +17,7 @@ export const Partners = (props) => {
                       width: "80px",
                       height: "80px",
                       objectFit: "contain",
-                      marginBottom: "15px"
+                      marginBottom: "15px",
                     }}
                   />
                   <div className="service-desc">

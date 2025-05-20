@@ -1,5 +1,3 @@
-import React from "react";
-
 export const About = (props) => {
   return (
     <div id="about">
@@ -15,18 +13,10 @@ export const About = (props) => {
               <h3>¿Por qué elegirnos?</h3>
               <div className="row list-style">
                 <div className="col-sm-6">
-                  <ul>
-                    {props.data
-                      ? props.data.Why.map((d, i) => <li key={`${d}-${i}`}>{d}</li>)
-                      : "Cargando..."}
-                  </ul>
+                  <ul>{props.data ? props.data.Why.map((d, i) => <li key={`${d}-${i}`}>{d}</li>) : "Cargando..."}</ul>
                 </div>
                 <div className="col-sm-6">
-                  <ul>
-                    {props.data
-                      ? props.data.Why2.map((d, i) => <li key={`${d}-${i}`}>{d}</li>)
-                      : "Cargando..."}
-                  </ul>
+                  <ul>{props.data ? props.data.Why2.map((d, i) => <li key={`${d}-${i}`}>{d}</li>) : "Cargando..."}</ul>
                 </div>
               </div>
             </div>

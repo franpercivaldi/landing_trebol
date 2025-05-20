@@ -1,6 +1,5 @@
-import { useState } from "react";
 import emailjs from "emailjs-com";
-import React from "react";
+import { useState } from "react";
 
 const initialState = {
   name: "",
@@ -15,25 +14,24 @@ export const Contact = (props) => {
     setState((prevState) => ({ ...prevState, [name]: value }));
   };
   const clearState = () => setState({ ...initialState });
-  
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(name, email, message);
-    
-    {/* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */ }
-    
-    emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_PUBLIC_KEY")
-      .then(
-        (result) => {
-          console.log(result.text);
-          clearState();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+
+    {
+      /* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */
+    }
+
+    emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_PUBLIC_KEY").then(
+      (result) => {
+        console.log(result.text);
+        clearState();
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
   };
   return (
     <div>
@@ -43,10 +41,7 @@ export const Contact = (props) => {
             <div className="row">
               <div className="section-title">
                 <h2>Contactanos.</h2>
-                <p>
-                  Por favor completá el siguiente formulario para enviarnos un mensaje.
-                  Te responderemos lo antes posible.
-                </p>
+                <p>Por favor completá el siguiente formulario para enviarnos un mensaje. Te responderemos lo antes posible.</p>
               </div>
               <form name="sentMessage" validate onSubmit={handleSubmit}>
                 <div className="row">

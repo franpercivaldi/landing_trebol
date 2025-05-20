@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Image = ({ title, largeImage, smallImage }) => {
   return (
     <div className="portfolio-item">
@@ -16,7 +14,7 @@ export const Image = ({ title, largeImage, smallImage }) => {
               height: "250px",
               objectFit: "cover",
               display: "block",
-              borderRadius: "6px"
+              borderRadius: "6px",
             }}
           />
         </a>
