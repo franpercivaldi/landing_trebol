@@ -1,6 +1,6 @@
-import { Image } from "./image";
+import { ServicesImage } from "./ServicesImage";
 
-export const Gallery = (props) => {
+export const Services = (props) => {
   return (
     <div id="our-services" className="text-center">
       <div className="container">
@@ -13,7 +13,7 @@ export const Gallery = (props) => {
             {props.data
               ? props.data.map((d, i) => (
                   <div key={`${d.title}-${i}`} className="col-sm-6 col-md-4 col-lg-4">
-                    <Image title={d.title} smallImage={d.smallImage} />
+                    <ServicesImage title={d.title} smallImage={d.smallImage} />
                   </div>
                 ))
               : "Loading..."}

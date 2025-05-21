@@ -1,21 +1,23 @@
 import { useEffect, useState } from "react";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
-import { Team } from "./components/Team";
-import { About } from "./components/about";
-import { Contact } from "./components/contact";
+import { AboutUs } from "./components/AboutUs";
+import { Allies } from "./components/Allies";
 import { Benefits } from "./components/Benefits";
-import { Gallery } from "./components/gallery";
-import { Header } from "./components/header";
-import { Navigation } from "./components/navigation";
-import { Partners } from "./components/partners";
-import { Testimonials } from "./components/testimonials";
-import JsonData from "./data/data.json";
+import { Contact } from "./components/Contact";
+import { Header } from "./components/Header";
+import { NavigationHeader } from "./components/NavigationHeader";
+import { Reviews } from "./components/Reviews";
+import { Services } from "./components/Services";
+import { Team } from "./components/Team";
 import VisitUs from "./components/VisitUs";
+import JsonData from "./data/data.json";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
   speedAsDuration: true,
+  offset: 101, // Height of the fixed header
+  easing: "easeInOutCubic",
 });
 
 const App = () => {
@@ -26,13 +28,13 @@ const App = () => {
 
   return (
     <div>
-      <Navigation />
+      <NavigationHeader />
       <Header data={landingPageData.Header} />
       <Benefits data={landingPageData.Benefits} />
-      <About data={landingPageData.About} />
-      <Gallery data={landingPageData.Gallery} />
-      <Partners data={landingPageData.Services} />
-      <Testimonials data={landingPageData.Testimonials} />
+      <AboutUs data={landingPageData.AboutUs} />
+      <Services data={landingPageData.Services} />
+      <Allies data={landingPageData.Allies} />
+      <Reviews data={landingPageData.Reviews} />
       <Team data={landingPageData.Team} />
       <VisitUs />
       <Contact data={landingPageData.Contact} />

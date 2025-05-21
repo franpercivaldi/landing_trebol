@@ -3,7 +3,7 @@
     "title": "El trebol seguros",
     "paragraph": "Hace más de 15 años ofrecemos el mejor servicio personalizado con el respaldo de las grandes empresas."
   },
-  "About": {
+  "AboutUs": {
     "paragraph": "Hace más de 15 años, Josesito Masa fundó nuestra aseguradora con una visión clara: brindar tranquilidad y respaldo a las familias y empresas de nuestra comunidad. Lo que comenzó como una pequeña oficina con un fuerte compromiso humano, se ha transformado en una compañía sólida, reconocida por su cercanía, transparencia y excelencia en el servicio.Hoy, seguimos creciendo con el mismo propósito que nos vio nacer: proteger lo que más importa. Ofrecemos coberturas integrales en salud, vida, vehículos y hogar, con soluciones flexibles y atención personalizada 24/7. Nuestra experiencia nos permite anticiparnos a tus necesidades y acompañarte en cada etapa de tu vida.",
     "Why": [
       "Más de 15 años de experiencia",
@@ -18,7 +18,7 @@
       "Miles de clientes nos eligen"
     ]
   },
-  "Gallery": [
+  "Services": [
     {
       "title": "Seguro automotor",
       "smallImage": "img/our-services/seguroAuto.jpg"
@@ -56,7 +56,7 @@
       "smallImage": "img/our-services/seguroBici3.jpg"
     }
   ],
-  "Services": [
+  "Allies": [
     {
       "icon": "partners/medicalWork.jpg",
       "name": "MedicarWork"
@@ -82,34 +82,34 @@
       "name": "Triunfo Seguros"
     }
   ],
-  "Testimonials": [
+  "Reviews": [
     {
-      "img": "img/testimonials/01.jpg",
+      "img": "img/reviews/01.jpg",
       "text": "Excelente atención, envié mensaje de WhatsApp y me respondieron rápido y muy respetuosamente, brindando la información que necesitaba.",
       "name": "Florencia Alaniz"
     },
     {
-      "img": "img/testimonials/02.jpg",
+      "img": "img/reviews/02.jpg",
       "text": "Productos que se adecúan a la necesidades de los clientes. Muy buena atención.",
       "name": "Fernando perez"
     },
     {
-      "img": "img/testimonials/03.jpg",
+      "img": "img/reviews/03.jpg",
       "text": "Excelente atención. Buena calidad de venta.",
       "name": "Miguel"
     },
     {
-      "img": "img/testimonials/04.jpg",
+      "img": "img/reviews/04.jpg",
       "text": "Excelente la atención y el acompañamiento en los servicios.",
       "name": "Lucia Depretto"
     },
     {
-      "img": "img/testimonials/05.jpg",
+      "img": "img/reviews/05.jpg",
       "text": "Buena atención aseguraron el auto en 15min.",
       "name": "Franco b"
     },
     {
-      "img": "img/testimonials/06.jpg",
+      "img": "img/reviews/06.jpg",
       "text": "Excelente atención... rápido y preciso. Evacuaron todas mis dudas.",
       "name": "Malena Fernandez"
     }
@@ -138,7 +138,7 @@
   ],
   "Contact": {
     "address": "Avenida Bodereau 9498, X5000 Córdoba",
-    "phone": "03512780483",
+    "phone": "+54 9 351 2780483",
     "email": "eltrebolseguros@gmail.com",
     "facebook": "https://www.facebook.com/eltrebolorganizacion/?locale=ms_MY",
     "instagram": "https://www.instagram.com/eltrebolorganizacion/?hl=es"

@@ -70,10 +70,16 @@ hr {
   margin-bottom: 20px;
   border: 0;
 }
-/* Navigation */
+/* NavigationHeader */
 #menu {
   padding: 15px;
   transition: all 0.8s;
+}
+#menu .header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
 }
 #menu.navbar-default {
   background-color: #fff;
@@ -174,8 +180,9 @@ hr {
   font-size: 15px;
   font-weight: 500;
   border-radius: 25px;
-  transition: all 0.5s linear;
+  transition: all 0.25s ease-in-out;
   border: 0;
+  line-height: normal;
 }
 .btn-custom:hover,
 .btn-custom:focus,
@@ -264,20 +271,20 @@ header .intro-text p {
   background: linear-gradient(to right, #DC5BE3 0%, #7a1c8d 100%);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
 }
-/* About Section */
-#about {
+/* AboutUs Section */
+#about-us {
   padding: 100px 0;
 }
-#about h3 {
+#about-us h3 {
   font-size: 22px;
   margin: 0 0 20px;
 }
-#about h2 {
+#about-us h2 {
   position: relative;
   margin-bottom: 15px;
   padding-bottom: 15px;
 }
-#about h2::after {
+#about-us h2::after {
   position: absolute;
   content: "";
   background: linear-gradient(to right, #7a1c8d 0%, #DC5BE3 100%);
@@ -286,13 +293,13 @@ header .intro-text p {
   bottom: 0;
   left: 0;
 }
-#about .about-text li {
+#about-us .about-us-text li {
   margin-bottom: 6px;
   margin-left: 6px;
   list-style: none;
   padding: 0;
 }
-#about .about-text li:before {
+#about-us .about-us-text li:before {
   content: "\f00c";
   font-family: "FontAwesome";
   color: #7a1c8d;
@@ -300,30 +307,41 @@ header .intro-text p {
   font-weight: 300;
   padding-right: 8px;
 }
-#about img {
+#about-us img {
   width: 520px;
   margin-top: 10px;
   background: #fff;
   border-right: 0;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.06);
 }
-#about p {
+#about-us p {
   line-height: 24px;
   margin: 30px 0;
 }
-/* Services Section */
-#services {
+/* Allies Section */
+#allies {
   padding: 100px 0;
   background: linear-gradient(to right, #DC5BE3 0%, #7a1c8d 100%);
   color: #fff;
 }
-#services .service-desc {
-  margin: 10px 10px 20px;
+#allies .allies-list {
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  row-gap: 50px;
 }
-#services h2 {
+#allies .allies-desc {
+  margin: 10px;
+}
+#allies .allie {
+  width: 250px;
+}
+#allies h2 {
   color: #fff;
 }
-#services .section-title h2::after {
+#allies .section-title h2::after {
   position: absolute;
   content: "";
   background: rgba(255, 255, 255, 0.3);
@@ -333,7 +351,7 @@ header .intro-text p {
   margin-left: -30px;
   left: 50%;
 }
-#services i.fa {
+#allies i.fa {
   font-size: 42px;
   width: 120px;
   height: 120px;
@@ -343,16 +361,13 @@ header .intro-text p {
   color: #fff;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
 }
-#services h3 {
+#allies h3 {
   font-weight: 500;
   padding: 5px 0;
   color: #fff;
 }
-#services p {
+#allies p {
   color: rgba(255, 255, 255, 0.75);
-}
-#services .service-desc {
-  margin-bottom: 40px;
 }
 /* Portfolio Section */
 #our-services {
@@ -360,6 +375,7 @@ header .intro-text p {
   background: #f6f6f6;
 }
 .our-services-item {
+  cursor: pointer;
   margin: 1px -15px 0 -14px;
   padding: 0;
 }
@@ -369,6 +385,9 @@ header .intro-text p {
   margin: 0;
 }
 .hover-bg .hover-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   text-align: center;
   margin: 0 auto;
@@ -378,11 +397,11 @@ header .intro-text p {
     rgba(99, 114, 255, 0.8) 0%,
     rgba(92, 169, 251, 0.8) 100%
   );
-  padding: 30% 0 0;
   height: 100%;
   width: 100%;
   opacity: 0;
   transition: all 0.5s;
+  border-radius: 4px;
 }
 .hover-bg .hover-text > h4 {
   opacity: 0;
@@ -405,12 +424,12 @@ header .intro-text p {
 .hover-bg:hover .hover-text {
   opacity: 1;
 }
-/* Testimonials Section */
-#testimonials {
+/* Reviews Section */
+#reviews {
   padding: 100px 0;
   background: #f6f6f6;
 }
-#testimonials i {
+#reviews i {
   color: #e6e6e6;
   font-size: 32px;
   margin-bottom: 20px;
@@ -480,6 +499,7 @@ header .intro-text p {
   font-weight: 500;
   color: #7a1c8d;
   align-items: center;
+  margin-top: -25px;
 }
 #visit-us .map-pin p {
   margin: 0;
@@ -499,7 +519,7 @@ header .intro-text p {
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.06);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  margin-top: 24px;
+  margin-top: 20px;
 }
 
 /* Contact Section */
@@ -568,30 +588,13 @@ label {
   background-color: #fff;
   background-image: none;
   border: 1px solid #ddd;
-  border-radius: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  -webkit-transition: none;
-  -o-transition: none;
-  transition: none;
+  border-radius: 8px;
 }
 #contact .form-control:focus {
   border-color: #999;
   outline: 0;
   -webkit-box-shadow: transparent;
   box-shadow: transparent;
-}
-.form-control::-webkit-input-placeholder {
-  color: #777;
-}
-.form-control:-moz-placeholder {
-  color: #777;
-}
-.form-control::-moz-placeholder {
-  color: #777;
-}
-.form-control:-ms-input-placeholder {
-  color: #777;
 }
 #contact .contact-item {
   margin: 20px 0;
@@ -645,7 +648,7 @@ label {
 }
 
 @media (max-width: 768px) {
-  #about img {
+  #about-us img {
     margin: 50px 0;
   }
 }

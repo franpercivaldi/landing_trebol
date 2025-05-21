@@ -93,7 +93,7 @@ export const Contact = (props) => {
               <h3>Info del contacto</h3>
               <p>
                 <span>
-                  <i className="fa fa-map-marker"></i> Direccion
+                  <i className="fa fa-map-marker"></i> Dirección
                 </span>
                 {props.data ? props.data.address : "loading"}
               </p>

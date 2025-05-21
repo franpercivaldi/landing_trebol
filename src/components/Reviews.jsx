@@ -1,6 +1,6 @@
-export const Testimonials = (props) => {
+export const Reviews = (props) => {
   return (
-    <div id="testimonials">
+    <div id="reviews">
       <div className="container">
         <div className="section-title text-center">
           <h2>Lo que dicen nuestros clientes</h2>

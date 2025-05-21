@@ -1,10 +1,10 @@
 import { ReactComponent as Logo } from "../logoTrebol.svg";
 
-export const Navigation = (props) => {
+export const NavigationHeader = () => {
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
-      <div className="container">
-        <div className="navbar-header">
+      <div className="header-container">
+        <div>
           <button
             type="button"
             className="navbar-toggle collapsed"
@@ -20,7 +20,7 @@ export const Navigation = (props) => {
           </a>{" "}
         </div>
 
-        <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div>
           <ul className="nav navbar-nav navbar-right">
             <li>
               <a href="#benefits" className="page-scroll">
@@ -28,7 +28,7 @@ export const Navigation = (props) => {
               </a>
             </li>
             <li>
-              <a href="#about" className="page-scroll">
+              <a href="#about-us" className="page-scroll">
                 Nosotros
               </a>
             </li>
@@ -38,18 +38,23 @@ export const Navigation = (props) => {
               </a>
             </li>
             <li>
-              <a href="#services" className="page-scroll">
+              <a href="#allies" className="page-scroll">
                 Aliados
               </a>
             </li>
             <li>
-              <a href="#testimonials" className="page-scroll">
+              <a href="#reviews" className="page-scroll">
                 Testimonios
               </a>
             </li>
             <li>
               <a href="#team" className="page-scroll">
                 Equipo
+              </a>
+            </li>
+            <li>
+              <a href="#visit-us" className="page-scroll">
+                Visitanos
               </a>
             </li>
             <li>

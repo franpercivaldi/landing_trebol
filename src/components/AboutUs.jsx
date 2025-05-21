@@ -1,13 +1,13 @@
-export const About = (props) => {
+export const AboutUs = (props) => {
   return (
-    <div id="about">
+    <div id="about-us">
       <div className="container">
         <div className="row">
           <div className="col-xs-12 col-md-6">
-            <img src="img/about.jpg" className="img-responsive" alt="Sobre nosotros" />
+            <img src="img/about-us.jpg" className="img-responsive" alt="Sobre nosotros" />
           </div>
           <div className="col-xs-12 col-md-6">
-            <div className="about-text">
+            <div className="about-us-text">
               <h2>Quiénes somos</h2>
               <p>{props.data ? props.data.paragraph : "Cargando..."}</p>
               <h3>¿Por qué elegirnos?</h3>
