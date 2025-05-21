@@ -743,32 +743,26 @@ label {
   padding-top: 50px;
   margin-top: 50px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
-#contact .social ul li {
-  display: inline-block;
-  margin: 0 20px;
+
+#contact .social-icon {
+  width: 70px;
+  height: 70px;
+  padding: 8px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  filter: invert(1); /* Makes black images white */
 }
-#contact .social i.fa {
-  font-size: 22px;
-  width: 48px;
-  height: 48px;
-  padding: 12px 0;
-  border: 2px solid var(--color-white);
-  color: var(--color-white);
-  border-radius: 50%;
-  transition: all 0.3s;
+
+#contact .social-icon:hover {
+  background-color: white;
+  filter: invert(0); /* Makes white images black */
 }
-#contact .social i.fa:hover {
-  color: var(--color-blue);
-  background: var(--color-white);
-}
-#contact a {
-  color: var(--color-white);
-}
-#contact a:hover {
-  color: var(--color-blue);
-  text-decoration: underline;
-}
+
+
 /* Footer Section*/
 #footer {
   background: var(--color-grey);

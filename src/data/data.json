@@ -144,8 +144,21 @@
     "address": "Avenida Bodereau 9498 (local 4 y 5), Córdoba, Argentina",
     "phone": "+54 9 351 2780483",
     "email": "eltrebolseguros@gmail.com",
-    "facebook": "https://www.facebook.com/eltrebolorganizacion/?locale=ms_MY",
-    "instagram": "https://www.instagram.com/eltrebolorganizacion/?hl=es"
+    "facebook": {
+      "link": "https://www.facebook.com/eltrebolorganizacion",
+      "aria": "Facebook El Trebol",
+      "img": "/img/contacts/fb.png"
+    },
+    "instagram": {
+      "link": "https://www.instagram.com/eltrebolorganizacion",
+      "aria": "Instagram El Trebol",
+      "img": "/img/contacts/ig.png"
+    },
+    "whatsapp": {
+      "link": "https://wa.me/543512780483?text=Hola%21%20Me%20contacto%20con%20ustedes%20porque%20estoy%20interesado%20en%20",
+      "aria": "WhatsApp El Trebol",
+      "img": "/img/contacts/wsp.png"
+    }
   },
   "Benefits": [
     {

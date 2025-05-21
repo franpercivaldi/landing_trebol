@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
 import SmoothScroll from "smooth-scroll";
-import "./App.css";
 import { AboutUs } from "./components/AboutUs";
 import { Allies } from "./components/Allies";
 import { Benefits } from "./components/Benefits";
@@ -12,6 +10,7 @@ import { Services } from "./components/Services";
 import { Team } from "./components/Team";
 import VisitUs from "./components/VisitUs";
 import landingPageData from "./data/data.json";
+import "./App.css";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
