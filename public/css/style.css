@@ -14,61 +14,89 @@
   --color-form-border: #ddd;
   --color-form-focus: #999;
   --color-form-text: #444;
+
   /* Gradients */
   --gradient-primary: linear-gradient(to right, var(--color-brand-secondary) 0%, var(--color-brand) 100%);
   --gradient-light: linear-gradient(to right, var(--color-brand) 0%, var(--color-brand-secondary) 100%);
   --gradient-overlay: linear-gradient(to bottom right, rgba(99, 114, 255, 0.75) 0%, rgba(214, 74, 226, 0.75) 100%);
   --gradient-text: linear-gradient(to right, var(--color-brand) 0%, var(--color-brand-light) 100%);
   --gradient-white-fade: rgba(255, 255, 255, 0.3);
+
+  /* Font Families */
+  --font-primary: 'Open Sans', sans-serif;
+  --font-secondary: 'Raleway', sans-serif;
+  --font-tertiary: 'Lato', sans-serif;
+  --font-icon: 'FontAwesome';
+
+  /* Font Sizes */
+  --font-size-base: 15px;
+  --font-size-h2: 36px;
+  --font-size-h3: 20px;
+  --font-size-h4: 18px;
+  --font-size-h5: 14px;
+  --font-size-intro: 22px;
+  --font-size-section-title: 18px;
+  --font-size-btn: 15px;
+  --font-size-testimonial: 14px;
+  --font-size-meta: 15px;
+  --font-size-label: 12px;
+
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
 }
 
 body,
 html {
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-primary);
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   color: #777;
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
   width: 100% !important;
   height: 100% !important;
 }
 h2,
 h3,
 h4 {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--font-secondary);
 }
 h2 {
   text-transform: uppercase;
   margin: 0 0 20px;
-  font-weight: 800;
-  font-size: 36px;
+  font-weight: var(--font-weight-extrabold);
+  font-size: var(--font-size-h2);
   color: var(--color-grey-dark);
 }
 h3 {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
   color: var(--color-grey-dark);
 }
 h4 {
-  font-size: 18px;
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
   color: var(--color-grey-dark);
-  font-weight: 600;
 }
 h5 {
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   line-height: 20px;
 }
 p {
-  font-size: 15px;
+  font-size: var(--font-size-base);
 }
 p.intro {
   margin: 12px 0 0;
   line-height: 24px;
+  font-size: var(--font-size-intro);
 }
 a {
   color: var(--color-blue);
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
 }
 a:hover,
 a:focus {
@@ -109,9 +137,9 @@ hr {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 #menu a.navbar-brand {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--font-secondary);
   font-size: 24px;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--color-grey-dark);
   text-transform: uppercase;
 }
@@ -120,11 +148,11 @@ hr {
   gap: 14px;
 }
 #menu.navbar-default .navbar-nav > li > a {
-  font-family: "Lato", sans-serif;
+  font-family: var(--font-tertiary);
   text-transform: uppercase;
   color: #555;
-  font-size: 15px;
-  font-weight: 400;
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-normal);
   padding: 8px 2px;
   border-radius: 0;
 }
@@ -191,10 +219,10 @@ hr {
   left: 50%;
 }
 .section-title p {
-  font-size: 18px;
+  font-size: var(--font-size-section-title);
 }
 .btn-custom {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--font-secondary);
   text-transform: uppercase;
   color: var(--color-white);
   background-color: var(--color-brand);
@@ -202,8 +230,8 @@ hr {
   padding: 14px 34px;
   letter-spacing: 1px;
   margin: 0;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: var(--font-size-btn);
+  font-weight: var(--font-weight-medium);
   border-radius: 25px;
   transition: all 0.25s ease-in-out;
   border: 0;
@@ -249,21 +277,21 @@ a:focus,
   background: rgba(0, 0, 0, 0.2);
 }
 .intro h1 {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--font-secondary);
   color: var(--color-white);
   font-size: 82px;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 10px;
 }
 .intro h1 span {
-  font-weight: 800;
+  font-weight: var(--font-weight-extrabold);
   color: var(--color-brand);
 }
 .intro p {
   color: var(--color-white);
-  font-size: 22px;
+  font-size: var(--font-size-intro);
   font-weight: 300;
   line-height: 30px;
   margin: 0 auto;
@@ -275,7 +303,7 @@ header .intro-text {
   text-align: center;
 }
 header .intro-text p {
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
 }
 /* Benefits Section */
 #benefits {
@@ -324,10 +352,10 @@ header .intro-text p {
 }
 #about-us .about-us-text li:before {
   content: "\f00c";
-  font-family: "FontAwesome";
+  font-family: var(--font-icon);
   color: var(--color-brand);
   font-size: 11px;
-  font-weight: 300;
+  font-weight: var(--font-weight-normal);
   padding-right: 8px;
 }
 #about-us img {
@@ -449,7 +477,6 @@ header .intro-text p {
   background: var(--color-grey);
 }
 #reviews i {
-  color: #e6e6e6;
   font-size: 32px;
   margin-bottom: 20px;
 }
@@ -474,13 +501,13 @@ header .intro-text p {
 }
 .testimonial-content p {
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: var(--font-size-testimonial);
   font-style: italic;
 }
 .testimonial-meta {
   margin-top: 10px;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: var(--font-size-meta);
+  font-weight: var(--font-weight-semibold);
   color: var(--color-grey-medium);
 }
 /* Team Section */
@@ -500,6 +527,7 @@ header .intro-text p {
 #team .thumbnail .caption {
   padding: 10px 0 0;
   color: var(--color-grey-medium);
+  font-size: var(--font-size-base);
 }
 /* Visit Us Section */
 #visit-us {
@@ -515,7 +543,7 @@ header .intro-text p {
   display: flex;
   flex-direction: row;
   gap: 4px;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   color: var(--color-brand);
   align-items: center;
   margin-top: -25px;
@@ -573,7 +601,7 @@ header .intro-text p {
   margin-top: 80px;
   margin-bottom: 25px;
   padding-bottom: 20px;
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
 }
 #contact form {
   padding-top: 20px;
@@ -592,9 +620,9 @@ header .intro-text p {
   background: var(--color-white);
 }
 label {
-  font-size: 12px;
-  font-weight: 400;
-  font-family: "Open Sans", sans-serif;
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-primary);
   float: left;
 }
 #contact .form-control {
