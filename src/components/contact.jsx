@@ -1,4 +1,5 @@
 import emailjs from "emailjs-com";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 
 const initialState = {
@@ -91,28 +92,29 @@ export const Contact = (props) => {
           <div className="col-md-3 col-md-offset-1 contact-info">
             <div className="contact-item">
               <h3>Info del contacto</h3>
-              <p>
-                <span>
-                  <i className="fa fa-map-marker"></i> Dirección
-                </span>
+              <span className="contact-title">
+                <MapPin size={16} />
+                <p className="contact-title-text">Dirección</p>
+              </span>
+              <a href="https://maps.app.goo.gl/wJWjrzzEJ5u9qdkn8" target="_blank" rel="noopener noreferrer">
                 {props.data ? props.data.address : "loading"}
-              </p>
+              </a>
             </div>
             <div className="contact-item">
-              <p>
-                <span>
-                  <i className="fa fa-phone"></i> Celular
-                </span>{" "}
-                {props.data ? props.data.phone : "loading"}
-              </p>
+              <span className="contact-title">
+                <Phone size={16} />
+                <p className="contact-title-text">Celular</p>
+              </span>
+              <a href="tel:+5493512780483">{props.data ? props.data.phone : "loading"}</a>
             </div>
             <div className="contact-item">
-              <p>
-                <span>
-                  <i className="fa fa-envelope-o"></i> Email
-                </span>{" "}
+              <span className="contact-title">
+                <Mail size={16} />
+                <p className="contact-title-text">Email</p>
+              </span>
+              <a href="mailto:eltrebolseguros@gmail.com" target="_blank" rel="noopener noreferrer">
                 {props.data ? props.data.email : "loading"}
-              </p>
+              </a>
             </div>
           </div>
           <div className="col-md-12">
@@ -120,12 +122,12 @@ export const Contact = (props) => {
               <div className="social">
                 <ul>
                   <li>
-                    <a href={props.data ? props.data.facebook : "/"}>
+                    <a href={props.data ? props.data.facebook : "/"} target="_blank" rel="noopener noreferrer">
                       <i className="fa fa-facebook"></i>
                     </a>
                   </li>
                   <li>
-                    <a href={props.data ? props.data.instagram : "/"}>
+                    <a href={props.data ? props.data.instagram : "/"} target="_blank" rel="noopener noreferrer">
                       <i className="fa fa-instagram"></i>
                     </a>
                   </li>

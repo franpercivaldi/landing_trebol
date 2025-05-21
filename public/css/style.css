@@ -722,10 +722,14 @@ label {
 #contact .contact-item {
   margin: 20px 0;
 }
-#contact .contact-item span {
-  color: var(--color-white);
-  margin-bottom: 10px;
-  display: block;
+#contact .contact-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+#contact .contact-title-text {
+  margin: 0;
 }
 #contact .contact-item i.fa {
   margin-right: 10px;
@@ -753,6 +757,13 @@ label {
 #contact .social i.fa:hover {
   color: var(--color-blue);
   background: var(--color-white);
+}
+#contact a {
+  color: var(--color-white);
+}
+#contact a:hover {
+  color: var(--color-blue);
+  text-decoration: underline;
 }
 /* Footer Section*/
 #footer {
