@@ -234,15 +234,19 @@ hr {
   font-weight: var(--font-weight-medium);
   border-radius: 25px;
   transition: all 0.25s ease-in-out;
-  border: 0;
   line-height: normal;
+  border: 0;
 }
+
 .btn-custom:hover,
 .btn-custom:focus,
 .btn-custom.focus,
 .btn-custom:active,
 .btn-custom.active {
+  color: var(--color-white);
   background-color: var(--color-brand-secondary);
+  background-image: var(--gradient-primary);
+  transform: scale(1.025);
 }
 .btn:active,
 .btn.active {
@@ -322,6 +326,13 @@ header .intro-text p {
   background: var(--gradient-primary);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
 }
+#benefits .benefit {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#benefits .benefit:hover {
+  transform: scale(1.05);
+}
 /* AboutUs Section */
 #about-us {
   padding: 100px 0;
@@ -387,7 +398,12 @@ header .intro-text p {
   margin: 10px;
 }
 #allies .allie {
+  cursor: pointer;
+  transition: all 0.3s;
   width: 250px;
+}
+#allies .allie:hover {
+  transform: scale(1.05);
 }
 #allies h2 {
   color: var(--color-white);
