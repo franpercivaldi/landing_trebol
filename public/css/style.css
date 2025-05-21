@@ -222,39 +222,75 @@ hr {
   font-size: var(--font-size-section-title);
 }
 .btn-custom {
-  font-family: var(--font-secondary);
-  text-transform: uppercase;
-  color: var(--color-white);
-  background-color: var(--color-brand);
-  background-image: var(--gradient-light);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;               /* clip the gradients to the button shape */
+  display: inline-block;
   padding: 14px 34px;
-  letter-spacing: 1px;
   margin: 0;
+  font-family: var(--font-secondary);
   font-size: var(--font-size-btn);
   font-weight: var(--font-weight-medium);
-  border-radius: 25px;
-  transition: all 0.25s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   line-height: normal;
+  color: var(--color-white);
   border: 0;
+  border-radius: 25px;
+  cursor: pointer;
+
+  /* fallback solid color if gradients don’t load */
+  background-color: var(--color-brand);
+  transition: transform 0.25s ease-in-out;
+}
+
+.btn-custom::before,
+.btn-custom::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  transition: opacity 0.25s ease-in-out;
+  z-index: -1;
+}
+
+/* Default (outgoing) gradient */
+.btn-custom::before {
+  background-image: var(--gradient-light);
+  opacity: 1;
+}
+
+/* Hover (incoming) gradient, start hidden */
+.btn-custom::after {
+  background-image: var(--gradient-primary);
+  opacity: 0;
 }
 
 .btn-custom:hover,
-.btn-custom:focus,
-.btn-custom.focus,
-.btn-custom:active,
-.btn-custom.active {
+.btn-custom:focus {
+  /* keep text white */
   color: var(--color-white);
-  background-color: var(--color-brand-secondary);
-  background-image: var(--gradient-primary);
   transform: scale(1.025);
 }
+
+/* fade the hover-gradient in */
+.btn-custom:hover::after {
+  opacity: 1;
+}
+
+/* ensure the old gradient stays visible underneath */
+.btn-custom:hover::before {
+  opacity: 1;
+}
+
+/* reset any .btn active rules you need to keep */
 .btn:active,
 .btn.active {
   background-image: none;
   outline: 0;
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
+
 a:focus,
 .btn:focus,
 .btn:active:focus,
@@ -263,8 +299,9 @@ a:focus,
 .btn:active.focus,
 .btn.active.focus {
   outline: none;
-  outline-offset: none;
+  outline-offset: 0;
 }
+
 /* Header Section */
 .intro {
   display: table;
@@ -626,14 +663,37 @@ header .intro-text p {
   color: var(--color-danger);
   text-align: left;
 }
+/* Contact section “ghost” button */
 #contact .btn-custom {
   margin: 30px 0;
-  background: transparent;
+  padding: 14px 34px;
+  background-color: transparent;
   border: 2px solid var(--color-white);
+  color: var(--color-white);
+  border-radius: 25px;
+  cursor: pointer;
+
+  /* Animate only these */
+  transition:
+    background-color 0.25s ease-in-out,
+    color            0.25s ease-in-out,
+    border-color     0.25s ease-in-out,
+    transform        0.25s ease-in-out;
 }
-#contact .btn-custom:hover {
-  color: var(--color-brand-dark);
-  background: var(--color-white);
+
+/* Kill the global .btn-custom pseudos for this variant */
+#contact .btn-custom::before,
+#contact .btn-custom::after {
+  display: none;
+}
+
+/* Hover/focus state */
+#contact .btn-custom:hover,
+#contact .btn-custom:focus {
+  background-color: var(--color-white);
+  border-color:    var(--color-form-text);
+  color:           var(--color-grey-dark);
+  transform:       scale(1.025);
 }
 label {
   font-size: var(--font-size-label);
