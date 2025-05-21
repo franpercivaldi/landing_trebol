@@ -58,27 +58,31 @@
   ],
   "Allies": [
     {
-      "icon": "partners/medicalWork.jpg",
+      "icon": "partners/atm.jpg",
+      "name": "ATM Seguros"
+    },
+    {
+      "icon": "partners/medicar-work.jpg",
       "name": "MedicarWork"
     },
     {
-      "icon": "partners/mercantilAndina.png",
+      "icon": "partners/mercantil-andina.png",
       "name": "Mercantil Andina"
     },
     {
-      "icon": "partners/prudenciaSeguro.jpg",
+      "icon": "partners/prudencia-seguros.png",
       "name": "Prudencia Seguros"
     },
     {
-      "icon": "partners/rusSeguro.png",
-      "name": "Rio Uruguay Seguros"
+      "icon": "partners/rus.jpg",
+      "name": "Río Uruguay Seguros"
     },
     {
-      "icon": "partners/seguroMetal.webp",
+      "icon": "partners/seguro-metal.webp",
       "name": "Segurometal"
     },
     {
-      "icon": "partners/triunfoSeguro.webp",
+      "icon": "partners/triunfo.jpg",
       "name": "Triunfo Seguros"
     }
   ],
