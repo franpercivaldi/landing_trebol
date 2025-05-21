@@ -93,6 +93,10 @@ hr {
   color: #333;
   text-transform: uppercase;
 }
+#menu .navbar-nav {
+  display: flex;
+  gap: 14px;
+}
 #menu.navbar-default .navbar-nav > li > a {
   font-family: "Lato", sans-serif;
   text-transform: uppercase;
@@ -101,7 +105,6 @@ hr {
   font-weight: 400;
   padding: 8px 2px;
   border-radius: 0;
-  margin: 9px 20px 0;
 }
 #menu.navbar-default .navbar-nav > li > a:after {
   display: block;
