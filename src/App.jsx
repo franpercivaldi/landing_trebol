@@ -11,7 +11,7 @@ import { Reviews } from "./components/Reviews";
 import { Services } from "./components/Services";
 import { Team } from "./components/Team";
 import VisitUs from "./components/VisitUs";
-import JsonData from "./data/data.json";
+import landingPageData from "./data/data.json";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -21,11 +21,6 @@ export const scroll = new SmoothScroll('a[href*="#"]', {
 });
 
 const App = () => {
-  const [landingPageData, setLandingPageData] = useState({});
-  useEffect(() => {
-    setLandingPageData(JsonData);
-  }, []);
-
   return (
     <div>
       <NavigationHeader />
