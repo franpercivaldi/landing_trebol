@@ -14,8 +14,8 @@ export const Allies = (props) => {
                     src={d.icon}
                     alt={d.name}
                     style={{
-                      width: "80px",
-                      height: "80px",
+                      width: "100px",
+                      height: "100px",
                       objectFit: "contain",
                     }}
                   />
