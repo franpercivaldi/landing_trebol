@@ -1,6 +1,6 @@
-export const Header = (props) => {
+export const Introduction = (props) => {
   return (
-    <header id="header">
+    <div id="introduction">
       <div className="intro">
         <div className="overlay">
           <div className="container">
@@ -16,6 +16,6 @@ export const Header = (props) => {
           </div>
         </div>
       </div>
-    </header>
+    </div>
   );
 };

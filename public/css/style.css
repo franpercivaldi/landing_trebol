@@ -299,7 +299,7 @@ a:focus,
 }
 
 /* Header Section */
-#header .intro {
+#introduction .intro {
   display: table;
   width: 100%;
   padding: 0;
@@ -310,10 +310,10 @@ a:focus,
   background-size: cover;
   -o-background-size: cover;
 }
-#header .overlay {
+#introduction .overlay {
   background: rgba(0, 0, 0, 0.2);
 }
-#header .intro h1 {
+#introduction .intro h1 {
   cursor: default;
   user-select: none;
   font-family: var(--font-secondary);
@@ -324,7 +324,7 @@ a:focus,
   margin-top: 0;
   margin-bottom: 10px;
 }
-#header .intro p {
+#introduction .intro p {
   color: var(--color-white);
   font-size: var(--font-size-intro);
   font-weight: 300;
@@ -332,12 +332,12 @@ a:focus,
   margin: 0 auto;
   margin-bottom: 60px;
 }
-#header .intro-text {
+#introduction .intro-text {
   padding-top: 350px;
   padding-bottom: 200px;
   text-align: center;
 }
-#header .intro-text p {
+#introduction .intro-text p {
   font-weight: var(--font-weight-normal);
 }
 

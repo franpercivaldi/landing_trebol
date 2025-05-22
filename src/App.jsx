@@ -3,7 +3,7 @@ import { AboutUs } from "./components/AboutUs";
 import { Allies } from "./components/Allies";
 import { Benefits } from "./components/Benefits";
 import { Contact } from "./components/Contact";
-import { Header } from "./components/Header";
+import { Introduction } from "./components/Introduction";
 import { NavigationHeader } from "./components/NavigationHeader";
 import { Reviews } from "./components/Reviews";
 import { Services } from "./components/Services";
@@ -24,7 +24,7 @@ const App = () => {
   return (
     <div>
       <NavigationHeader />
-      <Header data={landingPageData.Header} />
+      <Introduction data={landingPageData.Introduction} />
       <Benefits data={landingPageData.Benefits} />
       <AboutUs data={landingPageData.AboutUs} />
       <Services data={landingPageData.Services} />
