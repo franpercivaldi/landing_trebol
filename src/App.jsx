@@ -9,6 +9,7 @@ import { Reviews } from "./components/Reviews";
 import { Services } from "./components/Services";
 import { Team } from "./components/Team";
 import VisitUs from "./components/VisitUs";
+import FAQ from "./components/FAQ";
 import landingPageData from "./data/data.json";
 import "./App.css";
 
@@ -31,6 +32,7 @@ const App = () => {
       <Reviews data={landingPageData.Reviews} />
       <Team data={landingPageData.Team} />
       <VisitUs />
+      <FAQ />
       <Contact data={landingPageData.Contact} />
     </div>
   );

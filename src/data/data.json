@@ -181,5 +181,27 @@
       "title": "Más de 15 años de experiencia",
       "text": "Confianza respaldada por casi 2 décadas de trayectoria protegiendo a miles de familias y empresas."
     }
+  ],
+  "FAQ": [
+    {
+      "question": "¿Qué tipos de seguros ofrecen?",
+      "answer": "Ofrecemos seguros para autos, motos, bicicletas, hogar, comercios, salud, vida y más. Consultá por el que mejor se adapte a tus necesidades."
+    },
+    {
+      "question": "¿Cómo solicito una cotización?",
+      "answer": "Podés solicitar una cotización completando el formulario de contacto, escribiéndonos por WhatsApp o visitando nuestra oficina."
+    },
+    {
+      "question": "¿Qué hago en caso de siniestro?",
+      "answer": "Ante un siniestro, comunicate con nosotros lo antes posible. Te guiaremos en cada paso para que puedas realizar la denuncia y gestionar tu cobertura."
+    },
+    {
+      "question": "¿Puedo modificar mi póliza?",
+      "answer": "Sí, podés modificar tu póliza en cualquier momento. Contactanos para asesorarte sobre los cambios que necesitás realizar."
+    },
+    {
+      "question": "¿Cómo recibo mi póliza?",
+      "answer": "Te enviamos la póliza por correo electrónico y también podés retirarla en nuestra oficina si lo preferís."
+    }
   ]
 }
