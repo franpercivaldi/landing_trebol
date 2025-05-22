@@ -97,7 +97,7 @@ export const Contact = (props) => {
                 <p className="contact-title-text">Dirección</p>
               </span>
               <a href="https://maps.app.goo.gl/wJWjrzzEJ5u9qdkn8" target="_blank" rel="noopener noreferrer">
-                {props.data ? props.data.address : "loading"}
+                {props.data.address}
               </a>
             </div>
             <div className="contact-item">
