@@ -10,8 +10,8 @@ export const Services = (props) => {
         </div>
         <div className="row">
           <div className="our-services-items">
-            {props.data.map((d, i) => (
-              <div key={`${d.title}-${i}`} className="col-sm-6 col-md-4 col-lg-4">
+            {props.data.map((d) => (
+              <div key={d.title} className="col-sm-6 col-md-4 col-lg-4">
                 <ServicesImage title={d.title} smallImage={d.smallImage} />
               </div>
             ))}

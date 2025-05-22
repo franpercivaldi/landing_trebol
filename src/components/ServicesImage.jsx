@@ -2,7 +2,7 @@ export const ServicesImage = ({ title, largeImage, smallImage }) => {
   return (
     <div className="our-services-item">
       <div className="hover-bg">
-        <a href={largeImage} title={title} data-lightbox-gallery="gallery1">
+        <a href={largeImage} title={title}>
           <div className="hover-text">
             <h4>{title}</h4>
           </div>
