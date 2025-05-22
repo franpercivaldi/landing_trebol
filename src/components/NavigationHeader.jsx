@@ -10,13 +10,12 @@ export const NavigationHeader = () => {
           data-toggle="collapse"
           data-target="#bs-example-navbar-collapse-1"
         >
-          {" "}
-          <span className="sr-only">Toggle navigation</span> <span className="icon-bar"></span> <span className="icon-bar"></span>{" "}
-          <span className="icon-bar"></span>{" "}
+          <span className="sr-only">Toggle navigation</span> <span className="icon-bar"></span> <span className="icon-bar"></span>
+          <span className="icon-bar"></span>
         </button>
         <a className="navbar-brand page-scroll" href="#page-top">
           <Logo className="logo" style={{ height: "100px", width: "auto", verticalAlign: "middle" }} />
-        </a>{" "}
+        </a>
         <ul className="nav navbar-nav navbar-right">
           <li>
             <a href="#benefits" className="page-scroll">
