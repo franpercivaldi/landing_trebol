@@ -1,5 +1,3 @@
-import { ReactComponent as Logo } from "../logoTrebol.svg";
-
 export const NavigationHeader = () => {
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
@@ -14,7 +12,7 @@ export const NavigationHeader = () => {
           <span className="icon-bar"></span>
         </button>
         <a href="#page-top">
-          <Logo className="logo" style={{ height: "100px", width: "auto", verticalAlign: "middle" }} />
+          <img src="/img/logo.svg" alt="Logo" className="logo" />
         </a>
         <ul className="nav navbar-nav navbar-right">
           <li>

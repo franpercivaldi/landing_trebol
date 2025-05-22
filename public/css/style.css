@@ -118,13 +118,23 @@ ol {
 
 /* NavigationHeader */
 #menu {
+  display: flex;
+  justify-content: center;
   transition: all 0.8s;
   height: 100px;
+}
+.navbar {
+  margin: 0;
+}
+#menu .logo {
+  height: 75px;
+  width: 75px;
 }
 #menu .header-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px
 }
 #menu .navbar-nav {
   display: flex;
@@ -854,6 +864,8 @@ label {
   #menu .header-container {
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
   }
 
   #menu .navbar-toggle {
