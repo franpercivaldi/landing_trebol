@@ -6,8 +6,9 @@ export const Reviews = (props) => {
           <h2>Lo que dicen nuestros clientes</h2>
         </div>
         <div className="testimonials-list">
-          {props.data.map((d, i) => (
+          {props.data.map((d) => (
             <div
+              key={d.name}
               className="testimonial"
               style={{
                 minHeight: "150px",

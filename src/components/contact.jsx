@@ -38,7 +38,7 @@ export const Contact = (props) => {
               <h2>Contactanos.</h2>
               <p>Por favor completá el siguiente formulario para enviarnos un mensaje. Te responderemos lo antes posible.</p>
             </div>
-            <form name="sentMessage" validate onSubmit={handleSubmit}>
+            <form name="sentMessage" onSubmit={handleSubmit}>
               <div className="row">
                 <div className="col-md-6">
                   <div className="form-group">
