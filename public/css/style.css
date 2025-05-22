@@ -324,9 +324,12 @@ a:focus,
   margin-bottom: 60px;
 }
 #introduction .intro-text {
-  padding-top: 350px;
-  padding-bottom: 200px;
+  min-height: 800px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #introduction .intro-text p {
   font-weight: var(--font-weight-normal);
@@ -844,6 +847,10 @@ label {
   border-bottom: 2px solid var(--color-blue);
 }
 @media (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+
   #menu .header-container {
     flex-direction: row;
     justify-content: space-between;
@@ -882,9 +889,16 @@ label {
     width: 25px;
   }
 
+  /* Introduction Section */
+  #introduction .intro {
+    height: calc(100vh - 100px);
+    padding: 0;
+  }
+
   /* Benefits Section */
   #benefits .benefits-list {
     overflow-x: auto;
+    padding: 0 20px;
   }
 
   #about-us img {
