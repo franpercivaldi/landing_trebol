@@ -54,6 +54,11 @@ export const NavigationHeader = () => {
             </a>
           </li>
           <li>
+            <a href="#faq" className="page-scroll">
+              FAQ
+            </a>
+          </li>
+          <li>
             <a href="#contact" className="page-scroll">
               Contactanos
             </a>
