@@ -878,10 +878,18 @@ label {
   #menu .navbar-nav {
     flex-direction: column;
     display: none;
-    margin-top: 10px;
-    width: 100%;
+    width: 100vw;
+    max-width: none;
     padding-left: 0;
     background-color: var(--color-white);
+    position: absolute;
+    top: 110px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1000;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    border-radius: 12px;
   }
 
   #menu .navbar-nav.show {
@@ -889,8 +897,13 @@ label {
   }
 
   #menu .navbar-nav > li {
-    padding: 10px 20px;
+    padding: 16px 24px;
     text-align: left;
+    border-bottom: 1px solid var(--color-grey-light);
+  }
+
+  #menu .navbar-nav > li:last-child {
+    border-bottom: none;
   }
 
   #menu .navbar-toggle .icon-bar {
