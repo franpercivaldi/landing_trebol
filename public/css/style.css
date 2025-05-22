@@ -859,7 +859,12 @@ label {
 }
 @media (max-width: 768px) {
   .container {
-    padding: 0;
+    padding: 0 20px;
+  }
+
+  .row {
+    margin: 0;
+    max-width: 100vw;
   }
 
   #menu .header-container {
@@ -917,21 +922,86 @@ label {
 
   /* Introduction Section */
   #introduction .intro {
-    height: calc(100vh - 100px);
     padding: 0;
   }
 
+  #introduction .intro-text {
+    height: 100vh;
+  }
+
   /* Benefits Section */
+  #benefits {
+    padding: 40px 0;
+  }
+  #benefits .section-title {
+    margin-bottom: 20px;
+  }
   #benefits .benefits-list {
     overflow-x: auto;
     padding: 0 20px;
   }
 
+  /* About Us Section */
+  #about-us {
+    padding: 40px 0;
+    padding-top: 0;
+  }
   #about-us img {
     margin: 50px 0;
+  }
+  #about-us .why-choose-us {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* Services Section */
+  #our-services {
+    padding: 40px 0;
+  }
+
+  #our-services .section-title {
+    margin-bottom: 30px;
+  }
+  #our-services .our-services-item {
+    margin: 6px -15px 0 -14px;
+  }
+
+  /* Allies Section */
+  #allies {
+    padding: 40px 0;
+  }
+  #allies .allies-list {
+    display: block;
+    justify-items: center;
+  }
+  #allies .allie {
+    margin-bottom: 40px;
+  }
+
+  /* Reviews Section */
+  #reviews {
+    padding: 40px 0;
+  }
+  #reviews .section-title {
+    margin-bottom: 30px;
+  }
+
+  /* Team Section */
+  #team {
+    padding: 40px 0;
+  }
+  #team .section-title {
+    margin-bottom: 30px;
+  }
+
+  /* Visit Us Section */
+  #visit-us {
+    padding: 40px 0;
   }
 
   .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
     padding: 0;
+    max-width: 100vw;
   }
 }

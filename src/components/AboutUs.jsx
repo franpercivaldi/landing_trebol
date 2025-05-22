@@ -14,7 +14,7 @@ export const AboutUs = (props) => {
               <p>{props.data.paragraph}</p>
 
               <h3>¿Por qué elegirnos?</h3>
-              <div className="row">
+              <div className="row why-choose-us">
                 <div className="col-sm-6 about-list">
                   {props.data.Why.map((d) => (
                     <div className="about-elem" key={d}>

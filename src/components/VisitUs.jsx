@@ -13,7 +13,7 @@ export default function VisitUs() {
         </div>
 
         <div className="map-pin">
-          <MapPin /> <p>Avenida Bodereau 9498 (local 4 y 5), Córdoba, Argentina.</p>
+          <MapPin /> <p>Avenida Bodereau 9498, Córdoba, Argentina.</p>
         </div>
 
         <div className="map-gradient">
