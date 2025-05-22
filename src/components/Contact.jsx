@@ -90,7 +90,7 @@ export const Contact = (props) => {
         </div>
         <div className="col-md-3 col-md-offset-1 contact-info">
           <div className="contact-item">
-            <h3>Info del contacto</h3>
+            <h3 className="contact-info-title">Info del contacto</h3>
             <span className="contact-title">
               <MapPin size={16} />
               <p className="contact-title-text">Dirección</p>
