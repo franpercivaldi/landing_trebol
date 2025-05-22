@@ -1,3 +1,5 @@
+import { Menu } from "lucide-react";
+
 export const NavigationHeader = () => {
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
@@ -9,7 +11,7 @@ export const NavigationHeader = () => {
           data-target="#bs-example-navbar-collapse-1"
         >
           <span className="sr-only">Toggle navigation</span> <span className="icon-bar"></span> <span className="icon-bar"></span>
-          <span className="icon-bar"></span>
+          <Menu className="icon-bar" />
         </button>
         <a href="#page-top">
           <img src="/img/logo.svg" alt="Logo" className="logo" />
