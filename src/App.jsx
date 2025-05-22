@@ -11,7 +11,6 @@ import { Team } from "./components/Team";
 import VisitUs from "./components/VisitUs";
 import FAQ from "./components/FAQ";
 import landingPageData from "./data/data.json";
-import "./App.css";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,

@@ -348,6 +348,7 @@ a:focus,
 }
 #benefits .benefits-list {
   display: flex;
+  overflow: hidden;
   gap: 10px;
 }
 #benefits .icon-container {
@@ -368,6 +369,7 @@ a:focus,
   align-items: center;
   padding: 20px 8px;
   border-radius: 8px;
+  min-width: 200px;
 }
 #benefits .benefit:hover {
   background-color: var(--color-white);
@@ -892,6 +894,12 @@ label {
     display: block;
     width: 25px;
   }
+
+  /* Benefits Section */
+  #benefits .benefits-list {
+    overflow-x: auto;
+  }
+
   #about-us img {
     margin: 50px 0;
   }
