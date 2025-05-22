@@ -13,54 +13,36 @@ export const NavigationHeader = () => {
           <span className="sr-only">Toggle navigation</span> <span className="icon-bar"></span> <span className="icon-bar"></span>
           <span className="icon-bar"></span>
         </button>
-        <a className="navbar-brand page-scroll" href="#page-top">
+        <a href="#page-top">
           <Logo className="logo" style={{ height: "100px", width: "auto", verticalAlign: "middle" }} />
         </a>
         <ul className="nav navbar-nav navbar-right">
           <li>
-            <a href="#benefits" className="page-scroll">
-              ¿Por qué elegirnos?
-            </a>
+            <a href="#benefits">¿Por qué elegirnos?</a>
           </li>
           <li>
-            <a href="#about-us" className="page-scroll">
-              Nosotros
-            </a>
+            <a href="#about-us">Nosotros</a>
           </li>
           <li>
-            <a href="#our-services" className="page-scroll">
-              Servicios
-            </a>
+            <a href="#our-services">Servicios</a>
           </li>
           <li>
-            <a href="#allies" className="page-scroll">
-              Aliados
-            </a>
+            <a href="#allies">Aliados</a>
           </li>
           <li>
-            <a href="#reviews" className="page-scroll">
-              Testimonios
-            </a>
+            <a href="#reviews">Testimonios</a>
           </li>
           <li>
-            <a href="#team" className="page-scroll">
-              Equipo
-            </a>
+            <a href="#team">Equipo</a>
           </li>
           <li>
-            <a href="#visit-us" className="page-scroll">
-              Visitanos
-            </a>
+            <a href="#visit-us">Visitanos</a>
           </li>
           <li>
-            <a href="#faq" className="page-scroll">
-              FAQ
-            </a>
+            <a href="#faq">FAQ</a>
           </li>
           <li>
-            <a href="#contact" className="page-scroll">
-              Contactanos
-            </a>
+            <a href="#contact">Contactanos</a>
           </li>
         </ul>
       </div>

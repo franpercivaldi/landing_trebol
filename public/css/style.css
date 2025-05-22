@@ -118,41 +118,32 @@ ol {
 
 /* NavigationHeader */
 #menu {
-  padding: 15px;
   transition: all 0.8s;
+  height: 100px;
 }
 #menu .header-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 0;
-}
-#menu.navbar-default {
-  background-color: var(--color-white);
-  border-color: rgba(231, 231, 231, 0);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-}
-#menu a.navbar-brand {
-  font-family: var(--font-secondary);
-  font-size: 24px;
-  font-weight: var(--font-weight-bold);
-  color: var(--color-grey-dark);
-  text-transform: uppercase;
 }
 #menu .navbar-nav {
   display: flex;
   gap: 14px;
 }
-#menu.navbar-default .navbar-nav > li > a {
+.navbar-default {
+  background-color: var(--color-white);
+  border-color: rgba(231, 231, 231, 0);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+.navbar-default .navbar-nav > li > a {
   font-family: var(--font-tertiary);
   text-transform: uppercase;
   color: #555;
   font-size: var(--font-size-h5);
   font-weight: var(--font-weight-normal);
-  padding: 8px 2px;
   border-radius: 0;
 }
-#menu.navbar-default .navbar-nav > li > a:after {
+.navbar-default .navbar-nav > li > a:after {
   display: block;
   position: absolute;
   left: 0;
@@ -163,7 +154,7 @@ ol {
   content: "";
   transition: width 0.2s;
 }
-#menu.navbar-default .navbar-nav > li > a:hover:after {
+.navbar-default .navbar-nav > li > a:hover:after {
   width: 100%;
 }
 .navbar-default .navbar-nav > .active > a,
@@ -881,10 +872,6 @@ label {
   #menu .navbar-nav > li {
     padding: 10px 20px;
     text-align: left;
-  }
-
-  #menu .navbar-brand .logo {
-    height: 60px !important;
   }
 
   #menu .navbar-toggle .icon-bar {

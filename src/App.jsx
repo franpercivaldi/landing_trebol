@@ -15,7 +15,7 @@ import landingPageData from "./data/data.json";
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
   speedAsDuration: true,
-  offset: 101, // Height of the fixed header
+  offset: 100, // Height of the fixed header
   easing: "easeInOutCubic",
 });
 
