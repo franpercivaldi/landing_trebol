@@ -32,7 +32,7 @@ export const Contact = (props) => {
   return (
     <div>
       <div id="contact">
-        <div className="container">
+        <div className="container container-block">
           <div className="col-md-8">
             <div className="row">
               <div className="section-title">

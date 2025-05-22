@@ -14,10 +14,9 @@ export const Benefits = (props) => {
         <div className="col-md-10 col-md-offset-1 section-title">
           <h2>Beneficios</h2>
         </div>
-        <div className="row">
+        <div className="benefits-list">
           {props.data.map((d, i) => (
             <div key={`${d.title}-${i}`} className="col-md-3 benefit">
-              {" "}
               <div className="icon-container">{iconMap[d.icon]}</div>
               <h3>{d.title}</h3>
               <p>{d.text}</p>

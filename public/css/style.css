@@ -111,15 +111,11 @@ ul,
 ol {
   padding: 0;
 }
-hr {
-  height: 2px;
-  width: 70px;
-  text-align: center;
-  position: relative;
-  background: #1e7a46;
-  margin-bottom: 20px;
-  border: 0;
+
+.container-block {
+  display: block;
 }
+
 /* NavigationHeader */
 #menu {
   padding: 15px;
@@ -350,6 +346,10 @@ a:focus,
   padding: 100px 0;
   background: var(--color-grey);
 }
+#benefits .benefits-list {
+  display: flex;
+  gap: 10px;
+}
 #benefits .icon-container {
   color: var(--color-white);
   width: 100px;
@@ -366,8 +366,11 @@ a:focus,
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px 8px;
+  border-radius: 8px;
 }
 #benefits .benefit:hover {
+  background-color: var(--color-white);
   transform: scale(1.025);
 }
 /* AboutUs Section */
