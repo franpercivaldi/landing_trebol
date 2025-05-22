@@ -162,22 +162,22 @@
   },
   "Benefits": [
     {
-      "icon": "fa fa-shield",
+      "icon": "sield",
       "title": "Protección integral",
       "text": "Coberturas completas para salud, vida, auto y hogar, diseñadas para brindarte tranquilidad en todo momento."
     },
     {
-      "icon": "fa fa-clock-o",
+      "icon": "clock",
       "title": "Atención 24/7",
       "text": "Soporte personalizado y disponible en todo momento para ayudarte cuando más lo necesites."
     },
     {
-      "icon": "fa fa-money",
+      "icon": "bank",
       "title": "Planes flexibles",
       "text": "Elige entre múltiples opciones adaptadas a tus necesidades y presupuesto, sin comprometer la protección."
     },
     {
-      "icon": "fa fa-briefcase",
+      "icon": "calendar",
       "title": "Más de 15 años de experiencia",
       "text": "Confianza respaldada por casi 2 décadas de trayectoria protegiendo a miles de familias y empresas."
     }

@@ -350,24 +350,25 @@ a:focus,
   padding: 100px 0;
   background: var(--color-grey);
 }
-#benefits i.fa {
-  font-size: 38px;
-  margin-bottom: 20px;
-  transition: all 0.5s;
+#benefits .icon-container {
   color: var(--color-white);
   width: 100px;
   height: 100px;
-  padding: 30px 0;
-  border-radius: 50%;
+  border-radius: 1000px;
   background: var(--gradient-primary);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #benefits .benefit {
   cursor: pointer;
   transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #benefits .benefit:hover {
-  transform: scale(1.05);
+  transform: scale(1.025);
 }
 /* AboutUs Section */
 #about-us {
@@ -391,19 +392,19 @@ a:focus,
   bottom: 0;
   left: 0;
 }
-#about-us .about-us-text li {
-  margin-bottom: 6px;
-  margin-left: 6px;
-  list-style: none;
-  padding: 0;
+#about-us .about-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
-#about-us .about-us-text li:before {
-  content: "\f00c";
-  font-family: var(--font-icon);
+#about-us .about-elem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+#about-us .about-arrow {
   color: var(--color-brand);
-  font-size: 11px;
-  font-weight: var(--font-weight-normal);
-  padding-right: 8px;
 }
 #about-us img {
   width: 520px;
@@ -528,10 +529,6 @@ a:focus,
   padding: 100px 0;
   background: var(--color-grey);
 }
-#reviews i {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
 .testimonials-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -548,6 +545,7 @@ a:focus,
 
 .testimonial:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02);
 }
 
 .testimonial-image {

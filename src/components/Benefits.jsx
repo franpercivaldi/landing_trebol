@@ -1,3 +1,12 @@
+import { Calendar1, Clock, PiggyBank, ShieldPlus } from "lucide-react";
+
+const iconMap = {
+  sield: <ShieldPlus size={38} />,
+  clock: <Clock size={38} />,
+  bank: <PiggyBank size={38} />,
+  calendar: <Calendar1 size={38} />,
+};
+
 export const Benefits = (props) => {
   return (
     <div id="benefits" className="text-center">
@@ -6,16 +15,14 @@ export const Benefits = (props) => {
           <h2>Beneficios</h2>
         </div>
         <div className="row">
-          {props.data
-            ? props.data.map((d, i) => (
-                <div key={`${d.title}-${i}`} className="col-xs-6 col-md-3 benefit">
-                  {" "}
-                  <i className={d.icon}></i>
-                  <h3>{d.title}</h3>
-                  <p>{d.text}</p>
-                </div>
-              ))
-            : "Loading..."}
+          {props.data.map((d, i) => (
+            <div key={`${d.title}-${i}`} className="col-md-3 benefit">
+              {" "}
+              <div className="icon-container">{iconMap[d.icon]}</div>
+              <h3>{d.title}</h3>
+              <p>{d.text}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
