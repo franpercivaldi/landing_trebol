@@ -7,6 +7,9 @@ import emailjs from '@emailjs/browser';
 export const Services = ({ data }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [serviceType, setServiceType] = useState(null);
+  const serviceID = process.env.REACT_APP_SERVICE_ID;
+  const templateID = process.env.REACT_APP_TEMPLATE_ID;
+  const publicKey = process.env.REACT_APP_PUBLIC_KEY;
 
   const mapTitleToServiceType = title => {
     if (/automotor|taxi|monopatin/i.test(title)) return 'vehiculo';
@@ -24,10 +27,6 @@ export const Services = ({ data }) => {
   };
 
   const handleSubmit = formData => {
-    const serviceID  = 'service_1gmj93f';    // tu Service ID
-    const templateID = 'template_shrjv2r';   // tu Template ID
-    const publicKey  = 's1LOgESb2pc8GBKYr';  // tu Public Key
-
     const templateParams = {
       serviceType,
       ...formData,
