@@ -1,4 +1,4 @@
-import { Col, Form, Input, InputNumber, Modal, Row, Select } from "antd";
+import { Col, Form, Input, InputNumber, Modal, Row, Select, Switch } from "antd";
 const { Option } = Select;
 
 // TODO: mandar esto a un archivo dentro /data -> schema.js ?
@@ -10,7 +10,7 @@ const formConfigs = {
     { name: "marca", label: "Marca", type: "text", required: true },
     { name: "modelo", label: "Modelo", type: "text", required: true },
     { name: "anio", label: "Año", type: "number", required: true },
-    { name: "gnc", label: "¿Tiene GNC?", type: "select", options: ["SI", "NO"], required: true },
+    { name: "gnc", label: "¿Tiene GNC?", type: "switch", required: true },
   ],
   moto: [
     { name: "fullName", label: "Nombre y apellido", type: "text", required: true },
@@ -90,6 +90,9 @@ const QuoteForm = ({ visible, serviceType, onClose, onSubmit }) => {
                 break;
               case "number":
                 inputNode = <InputNumber style={{ width: "100%" }} />;
+                break;
+              case "switch":
+                inputNode = <Switch checkedChildren="Si" unCheckedChildren="No" />;
                 break;
               default:
                 inputNode = <Input />;
