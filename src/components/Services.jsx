@@ -1,8 +1,7 @@
-// src/components/Services.jsx
-import React, { useState } from 'react';
-import { ServicesImage } from './ServicesImage';
-import QuoteForm from './QuoteForm';
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
+import QuoteForm from "./QuoteForm";
+import { ServicesImage } from "./ServicesImage";
 
 export const Services = ({ data }) => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -11,22 +10,23 @@ export const Services = ({ data }) => {
   const templateID = process.env.REACT_APP_TEMPLATE_ID;
   const publicKey = process.env.REACT_APP_PUBLIC_KEY;
 
-  const mapTitleToServiceType = title => {
-    if (/automotor|taxi|monopatin/i.test(title)) return 'vehiculo';
-    if (/moto/i.test(title)) return 'moto';
-    if (/bici/i.test(title)) return 'bici';
-    if (/hogar|comercio/i.test(title)) return 'inmueble';
+  const mapTitleToServiceType = (title) => {
+    if (/automotor|taxi/i.test(title)) return "vehiculo";
+    if (/monopatin/i.test(title)) return "monopatin";
+    if (/moto/i.test(title)) return "moto";
+    if (/bici/i.test(title)) return "bici";
+    if (/hogar|comercio/i.test(title)) return "inmueble";
     return null;
   };
 
-  const openForm = title => {
+  const openForm = (title) => {
     const type = mapTitleToServiceType(title);
     if (!type) return;
     setServiceType(type);
     setModalOpen(true);
   };
 
-  const handleSubmit = formData => {
+  const handleSubmit = (formData) => {
     const templateParams = {
       serviceType,
       ...formData,
@@ -35,11 +35,11 @@ export const Services = ({ data }) => {
     emailjs
       .send(serviceID, templateID, templateParams, publicKey)
       .then(() => {
-        alert('Tu solicitud de cotización ha sido enviada correctamente.');
+        alert("Tu solicitud de cotización ha sido enviada correctamente.");
       })
-      .catch(err => {
-        console.error('Error al enviar cotización:', err);
-        alert('Hubo un error al enviar tu solicitud. ¡Intenta de nuevo más tarde!');
+      .catch((err) => {
+        console.error("Error al enviar cotización:", err);
+        alert("Hubo un error al enviar tu solicitud. ¡Intenta de nuevo más tarde!");
       });
   };
 
@@ -53,16 +53,9 @@ export const Services = ({ data }) => {
           </div>
           <div className="row">
             <div className="our-services-items">
-              {data.map(d => (
-                <div
-                  key={d.title}
-                  className="col-sm-6 col-md-4 col-lg-4 cursor-pointer"
-                  onClick={() => openForm(d.title)}
-                >
-                  <ServicesImage
-                    title={d.title}
-                    smallImage={d.smallImage}
-                  />
+              {data.map((d) => (
+                <div key={d.title} className="col-sm-6 col-md-4 col-lg-4 cursor-pointer" onClick={() => openForm(d.title)}>
+                  <ServicesImage title={d.title} smallImage={d.smallImage} />
                 </div>
               ))}
             </div>
@@ -70,12 +63,7 @@ export const Services = ({ data }) => {
         </div>
       </div>
 
-      <QuoteForm
-        visible={modalOpen}
-        serviceType={serviceType}
-        onClose={() => setModalOpen(false)}
-        onSubmit={handleSubmit}
-      />
+      <QuoteForm visible={modalOpen} serviceType={serviceType} onClose={() => setModalOpen(false)} onSubmit={handleSubmit} />
     </>
   );
 };

@@ -34,6 +34,14 @@ const formConfigs = {
     { name: "phone", label: "Teléfono", type: "text", required: false },
     { name: "comment", label: "Comentario", type: "textarea", required: false },
   ],
+  monopatin: [
+    { name: "fullName", label: "Nombre y apellido", type: "text", required: true },
+    { name: "phone", label: "Teléfono", type: "text", required: true },
+    { name: "zip", label: "Código postal", type: "text", required: true },
+    { name: "marca", label: "Marca", type: "text", required: true },
+    { name: "modelo", label: "Modelo", type: "text", required: true },
+    { name: "anio", label: "Año", type: "number", required: true },
+  ],
 };
 
 const QuoteForm = ({ visible, serviceType, onClose, onSubmit }) => {
