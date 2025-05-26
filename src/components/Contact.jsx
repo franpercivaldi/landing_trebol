@@ -16,21 +16,21 @@ export const Contact = () => {
     const { name, value } = e.target;
     setState((prevState) => ({ ...prevState, [name]: value }));
   };
+
   const clearState = () => setState({ ...initialState });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(name, email, message);
-    emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_PUBLIC_KEY").then(
-      (result) => {
-        console.log(result.text);
+    emailjs
+      .sendForm(props.data.serviceID, props.data.templateID, e.target, props.data.publicKey)
+      .then(() => {
         clearState();
-      },
-      (error) => {
+      })
+      .catch((error) => {
         console.log(error.text);
-      }
-    );
+      });
   };
+
   return (
     <div id="contact">
       <div className="container container-block">
@@ -51,11 +51,12 @@ export const Contact = () => {
                       className="form-control"
                       placeholder="Nombre"
                       required
+                      value={name}
                       onChange={handleChange}
                     />
-                    <p className="help-block text-danger"></p>
                   </div>
                 </div>
+
                 <div className="col-md-6">
                   <div className="form-group">
                     <input
@@ -65,12 +66,13 @@ export const Contact = () => {
                       className="form-control"
                       placeholder="Email"
                       required
+                      value={email}
                       onChange={handleChange}
                     />
-                    <p className="help-block text-danger"></p>
                   </div>
                 </div>
               </div>
+
               <div className="form-group">
                 <textarea
                   name="message"
@@ -79,20 +81,24 @@ export const Contact = () => {
                   rows="4"
                   placeholder="Mensaje"
                   required
+                  value={message}
                   onChange={handleChange}
-                ></textarea>
-                <p className="help-block text-danger"></p>
+                />
               </div>
-              <div id="success"></div>
+
               <button type="submit" className="btn btn-custom btn-lg">
                 Enviar Mail
               </button>
             </form>
           </div>
         </div>
+
         <div className="col-md-3 col-md-offset-1 contact-info">
           <div className="contact-item">
             <h3 className="contact-info-title">Info del contacto</h3>
+          </div>
+
+          <div className="contact-item">
             <span className="contact-title">
               <MapPin size={16} />
               <p className="contact-title-text">Dirección</p>
@@ -100,55 +106,81 @@ export const Contact = () => {
             <a href="https://maps.app.goo.gl/wJWjrzzEJ5u9qdkn8" target="_blank" rel="noopener noreferrer">
               {contactData.address}
             </a>
+            <p>{props.data.address}</p>
+            <p>Avenida Donato Alvarez 7800, Córdoba, Argentina</p>
           </div>
+
           <div className="contact-item">
             <span className="contact-title">
               <Phone size={16} />
               <p className="contact-title-text">Celular</p>
             </span>
             <a href="tel:+5493512780483">{contactData.phone}</a>
+            <p>{props.data.phone}</p>
+            <p>+54 9 351 539-2047</p>
           </div>
+
           <div className="contact-item">
             <span className="contact-title">
               <Mail size={16} />
               <p className="contact-title-text">Email</p>
             </span>
-            <a href="mailto:eltrebolseguros@gmail.com" target="_blank" rel="noopener noreferrer">
-              {contactData.email}
+            <a href={`mailto:${props.data.email}`} target="_blank" rel="noopener noreferrer">
+              {props.data.email}
             </a>
           </div>
-        </div>
-        <div className="col-md-12">
-          <div className="row">
-            <div className="social">
+
+          <div className="col-md-12">
+            <div className="row social">
+              <a href={props.data.facebook.link} aria-label={props.data.facebook.aria} target="_blank" rel="noopener noreferrer">
+                <img src={props.data.facebook.img} alt={props.data.facebook.aria} className="social-icon" />
+              </a>
               <a
                 href={contactData.facebook.link}
                 aria-label={contactData.facebook.aria}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={contactData.facebook.img} alt={contactData.facebook.aria} className="social-icon" />
+                <img src={props.data.instagram.img} alt={props.data.instagram.aria} className="social-icon" />
               </a>
-              <a
-                href={contactData.instagram.link}
-                aria-label={contactData.instagram.aria}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src={contactData.instagram.img} alt={contactData.instagram.aria} className="social-icon" />
-              </a>
-              <a
-                href={contactData.whatsapp.link}
-                aria-label={contactData.whatsapp.aria}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src={contactData.whatsapp.img} alt={contactData.whatsapp.aria} className="social-icon" />
+              <a href={props.data.whatsapp.link} aria-label={props.data.whatsapp.aria} target="_blank" rel="noopener noreferrer">
+                <img src={props.data.whatsapp.img} alt={props.data.whatsapp.aria} className="social-icon" />
               </a>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Botón flotante de WhatsApp */}
+      <a
+        href="https://wa.me/543512780483"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          position: "fixed",
+          width: "80px",
+          height: "80px",
+          bottom: "40px",
+          right: "20px",
+          backgroundColor: "#ffffff",
+          borderRadius: "50%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
+          zIndex: 1000,
+        }}
+      >
+        <img
+          src={props.data.whatsapp.img}
+          alt={props.data.whatsapp.aria}
+          style={{
+            width: "32px",
+            height: "32px",
+            filter: "invert(22%) sepia(85%) saturate(500%) hue-rotate(256deg) brightness(92%) contrast(91%)",
+          }}
+        />
+      </a>
     </div>
   );
 };

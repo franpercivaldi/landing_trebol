@@ -5,7 +5,7 @@ import { Benefits } from "./components/Benefits";
 import { Contact } from "./components/Contact";
 import { Introduction } from "./components/Introduction";
 import { NavigationHeader } from "./components/NavigationHeader";
-import { Reviews } from "./components/Reviews";
+// import { Reviews } from "./components/Reviews";
 import { Services } from "./components/Services";
 import { Team } from "./components/Team";
 import VisitUs from "./components/VisitUs";
@@ -27,7 +27,7 @@ const App = () => {
       <AboutUs />
       <Services />
       <Allies />
-      <Reviews />
+      {/* <Reviews /> */}
       <Team />
       <VisitUs />
       <FAQ />

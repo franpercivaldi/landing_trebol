@@ -1,5 +1,5 @@
 import emailjs from "@emailjs/browser";
-import { useState } from "react";
+import { useState,useMemo } from "react";
 import QuoteForm from "./QuoteForm";
 import { ServicesImage } from "./ServicesImage";
 import landingPageData from "../data/data.json";
@@ -20,6 +20,16 @@ export const Services = () => {
     if (/hogar|comercio/i.test(title)) return "inmueble";
     return null;
   };
+
+  const descriptions = useMemo(() => {
+    return data.reduce((acc, item) => {
+      const key = mapTitleToServiceType(item.title);
+      if (key && item.description) {
+        acc[key] = item.description;
+      }
+      return acc;
+    }, {});
+  }, [data]);
 
   const openForm = (title) => {
     const type = mapTitleToServiceType(title);
@@ -51,7 +61,7 @@ export const Services = () => {
         <div className="container">
           <div className="section-title">
             <h2>Nuestros servicios</h2>
-            <p>Conocé todos los seguros que tenemos para vos.</p>
+            <p>Trabajamos con las mejores aseguradoras del país.</p>
           </div>
           <div className="row">
             <div className="our-services-items">
@@ -65,7 +75,12 @@ export const Services = () => {
         </div>
       </div>
 
-      <QuoteForm visible={modalOpen} serviceType={serviceType} onClose={() => setModalOpen(false)} onSubmit={handleSubmit} />
+      <QuoteForm 
+        visible={modalOpen}
+        serviceType={serviceType}   
+        descriptions={descriptions}  
+        onClose={() => setModalOpen(false)}
+        onSubmit={handleSubmit} />
     </>
   );
 };

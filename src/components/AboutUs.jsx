@@ -8,7 +8,7 @@ export const AboutUs = () => {
       <div className="container">
         <div className="row">
           <div className="col-xs-12 col-md-6">
-            <img src="img/about-us.jpg" className="img-responsive" alt="Sobre nosotros" />
+            <img src="img/quienesSomos.avif" className="img-responsive" alt="Sobre nosotros" />
           </div>
           <div className="col-xs-12 col-md-6">
             <div className="about-us-text">

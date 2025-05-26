@@ -28,7 +28,7 @@ export const NavigationHeader = () => {
           <img src="/img/logo.svg" alt="Logo" className="logo" />
         </a>
         <ul className={`nav navbar-nav navbar-right${menuOpen ? " show" : ""}`}>
-          {navData.links.map((link, idx) => (
+          {navData.links.map((link) => (
             <li key={link.href}>
               <a href={link.href} onClick={handleNavClick}>
                 {link.label}
