@@ -158,7 +158,56 @@
       "link": "https://wa.me/543512780483?text=Hola%21%20Me%20contacto%20con%20ustedes%20porque%20estoy%20interesado%20en%20",
       "aria": "WhatsApp El Trebol",
       "img": "/img/contacts/wsp.png"
-    }
+    },
+    "title": "Contactanos.",
+    "intro": "Por favor completá el siguiente formulario para enviarnos un mensaje. Te responderemos lo antes posible.",
+    "form": {
+      "namePlaceholder": "Nombre",
+      "emailPlaceholder": "Email",
+      "messagePlaceholder": "Mensaje",
+      "button": "Enviar Mail"
+    },
+    "infoTitle": "Info del contacto",
+    "addressLabel": "Dirección",
+    "phoneLabel": "Celular",
+    "emailLabel": "Email"
+  },
+  "AlliesSection": {
+    "title": "Nuestros aliados",
+    "intro": "El respaldo de las grandes compañías al servicio de tu seguridad."
+  },
+  "BenefitsSection": {
+    "title": "Beneficios"
+  },
+  "FAQSection": {
+    "title": "Preguntas frecuentes",
+    "intro": "Respondemos las dudas más comunes sobre nuestros servicios y coberturas."
+  },
+  "ReviewsSection": {
+    "title": "Lo que dicen nuestros clientes"
+  },
+  "ServicesSection": {
+    "title": "Nuestros servicios",
+    "intro": "Conocé todos los seguros que tenemos para vos."
+  },
+  "TeamSection": {
+    "title": "Nuestro equipo",
+    "intro": "Detrás de cada cobertura, hay personas listas para ayudarte con profesionalismo, cercanía y compromiso."
+  },
+  "AboutUsSection": {
+    "title": "Quiénes somos",
+    "whyTitle": "¿Por qué elegirnos?"
+  },
+  "VisitUs": {
+    "title": "Donde estamos",
+    "intro": "El trato personalizado cara a cara es nuestra especialidad. Si preferís charlar en persona, ¡te esperamos con gusto en nuestra oficina!",
+    "address": "Avenida Bodereau 9498, Córdoba, Argentina."
+  },
+  "QuoteForm": {
+    "title": "Solicitar cotización",
+    "okText": "Enviar",
+    "cancelText": "Cancelar",
+    "selectPlaceholder": "Seleccione"
   },
   "Benefits": [
     {
@@ -203,5 +252,19 @@
       "question": "¿Cómo recibo mi póliza?",
       "answer": "Te enviamos la póliza por correo electrónico y también podés retirarla en nuestra oficina si lo preferís."
     }
-  ]
+  ],
+  "NavigationHeader": {
+    "links": [
+      { "href": "#benefits", "label": "¿Por qué elegirnos?" },
+      { "href": "#about-us", "label": "Nosotros" },
+      { "href": "#our-services", "label": "Servicios" },
+      { "href": "#allies", "label": "Aliados" },
+      { "href": "#reviews", "label": "Testimonios" },
+      { "href": "#team", "label": "Equipo" },
+      { "href": "#visit-us", "label": "Visitanos" },
+      { "href": "#faq", "label": "FAQ" },
+      { "href": "#contact", "label": "Contactanos" }
+    ],
+    "toggleLabel": "Toggle navigation"
+  }
 }

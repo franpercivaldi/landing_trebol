@@ -1,4 +1,7 @@
 import { useState } from "react";
+import landingPageData from "../data/data.json";
+
+const { NavigationHeader: navData } = landingPageData;
 
 export const NavigationHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,51 +28,13 @@ export const NavigationHeader = () => {
           <img src="/img/logo.svg" alt="Logo" className="logo" />
         </a>
         <ul className={`nav navbar-nav navbar-right${menuOpen ? " show" : ""}`}>
-          <li>
-            <a href="#benefits" onClick={handleNavClick}>
-              ¿Por qué elegirnos?
-            </a>
-          </li>
-          <li>
-            <a href="#about-us" onClick={handleNavClick}>
-              Nosotros
-            </a>
-          </li>
-          <li>
-            <a href="#our-services" onClick={handleNavClick}>
-              Servicios
-            </a>
-          </li>
-          <li>
-            <a href="#allies" onClick={handleNavClick}>
-              Aliados
-            </a>
-          </li>
-          <li>
-            <a href="#reviews" onClick={handleNavClick}>
-              Testimonios
-            </a>
-          </li>
-          <li>
-            <a href="#team" onClick={handleNavClick}>
-              Equipo
-            </a>
-          </li>
-          <li>
-            <a href="#visit-us" onClick={handleNavClick}>
-              Visitanos
-            </a>
-          </li>
-          <li>
-            <a href="#faq" onClick={handleNavClick}>
-              FAQ
-            </a>
-          </li>
-          <li>
-            <a href="#contact" onClick={handleNavClick}>
-              Contactanos
-            </a>
-          </li>
+          {navData.links.map((link, idx) => (
+            <li key={link.href}>
+              <a href={link.href} onClick={handleNavClick}>
+                {link.label}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>
