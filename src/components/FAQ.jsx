@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import landingPageData from "../data/data.json";
+const { FAQ: faqData } = landingPageData;
 
 export default function FAQ() {
-  const faqData = landingPageData.FAQ;
   const [openIndex, setOpenIndex] = useState(0);
 
   const toggleAccordion = (idx) => {

@@ -1,13 +1,15 @@
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
+import landingPageData from "../data/data.json";
+const { Contact: contactData } = landingPageData;
 
 const initialState = {
   name: "",
   email: "",
   message: "",
 };
-export const Contact = (props) => {
+export const Contact = () => {
   const [{ name, email, message }, setState] = useState(initialState);
 
   const handleChange = (e) => {
@@ -96,7 +98,7 @@ export const Contact = (props) => {
               <p className="contact-title-text">Dirección</p>
             </span>
             <a href="https://maps.app.goo.gl/wJWjrzzEJ5u9qdkn8" target="_blank" rel="noopener noreferrer">
-              {props.data.address}
+              {contactData.address}
             </a>
           </div>
           <div className="contact-item">
@@ -104,7 +106,7 @@ export const Contact = (props) => {
               <Phone size={16} />
               <p className="contact-title-text">Celular</p>
             </span>
-            <a href="tel:+5493512780483">{props.data.phone}</a>
+            <a href="tel:+5493512780483">{contactData.phone}</a>
           </div>
           <div className="contact-item">
             <span className="contact-title">
@@ -112,26 +114,36 @@ export const Contact = (props) => {
               <p className="contact-title-text">Email</p>
             </span>
             <a href="mailto:eltrebolseguros@gmail.com" target="_blank" rel="noopener noreferrer">
-              {props.data.email}
+              {contactData.email}
             </a>
           </div>
         </div>
         <div className="col-md-12">
           <div className="row">
             <div className="social">
-              <a href={props.data.facebook.link} aria-label={props.data.facebook.aria} target="_blank" rel="noopener noreferrer">
-                <img src={props.data.facebook.img} alt={props.data.facebook.aria} className="social-icon" />
-              </a>
               <a
-                href={props.data.instagram.link}
-                aria-label={props.data.instagram.aria}
+                href={contactData.facebook.link}
+                aria-label={contactData.facebook.aria}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={props.data.instagram.img} alt={props.data.instagram.aria} className="social-icon" />
+                <img src={contactData.facebook.img} alt={contactData.facebook.aria} className="social-icon" />
               </a>
-              <a href={props.data.whatsapp.link} aria-label={props.data.whatsapp.aria} target="_blank" rel="noopener noreferrer">
-                <img src={props.data.whatsapp.img} alt={props.data.whatsapp.aria} className="social-icon" />
+              <a
+                href={contactData.instagram.link}
+                aria-label={contactData.instagram.aria}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={contactData.instagram.img} alt={contactData.instagram.aria} className="social-icon" />
+              </a>
+              <a
+                href={contactData.whatsapp.link}
+                aria-label={contactData.whatsapp.aria}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={contactData.whatsapp.img} alt={contactData.whatsapp.aria} className="social-icon" />
               </a>
             </div>
           </div>

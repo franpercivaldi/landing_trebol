@@ -2,8 +2,10 @@ import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import QuoteForm from "./QuoteForm";
 import { ServicesImage } from "./ServicesImage";
+import landingPageData from "../data/data.json";
+const { Services: servicesData } = landingPageData;
 
-export const Services = ({ data }) => {
+export const Services = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [serviceType, setServiceType] = useState(null);
   const serviceID = process.env.REACT_APP_SERVICE_ID;
@@ -53,7 +55,7 @@ export const Services = ({ data }) => {
           </div>
           <div className="row">
             <div className="our-services-items">
-              {data.map((d) => (
+              {servicesData.map((d) => (
                 <div key={d.title} className="col-sm-6 col-md-4 col-lg-4 cursor-pointer" onClick={() => openForm(d.title)}>
                   <ServicesImage title={d.title} smallImage={d.smallImage} />
                 </div>

@@ -1,4 +1,7 @@
-export const Team = (props) => {
+import landingPageData from "../data/data.json";
+const { Team: teamData } = landingPageData;
+
+export const Team = () => {
   return (
     <div id="team" className="text-center">
       <div className="container">
@@ -7,7 +10,7 @@ export const Team = (props) => {
           <p>Detrás de cada cobertura, hay personas listas para ayudarte con profesionalismo, cercanía y compromiso.</p>
         </div>
         <div id="row">
-          {props.data.map((d, i) => (
+          {teamData.map((d, i) => (
             <div key={`${d.name}-${i}`} className="col-md-3 col-sm-6 team">
               <div className="thumbnail">
                 {" "}

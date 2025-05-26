@@ -1,4 +1,7 @@
-export const Reviews = (props) => {
+import landingPageData from "../data/data.json";
+const { Reviews: reviewsData } = landingPageData;
+
+export const Reviews = () => {
   return (
     <div id="reviews">
       <div className="container">
@@ -6,7 +9,7 @@ export const Reviews = (props) => {
           <h2>Lo que dicen nuestros clientes</h2>
         </div>
         <div className="testimonials-list">
-          {props.data.map((d) => (
+          {reviewsData.map((d) => (
             <div
               key={d.name}
               className="testimonial"
