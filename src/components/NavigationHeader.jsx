@@ -45,11 +45,11 @@ export const NavigationHeader = () => {
               Aliados
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href="#reviews" onClick={handleNavClick}>
               Testimonios
             </a>
-          </li>
+          </li> */}
           <li>
             <a href="#team" onClick={handleNavClick}>
               Equipo
