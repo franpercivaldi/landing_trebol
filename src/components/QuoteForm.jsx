@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Modal, Form, Row, Col, Input, InputNumber, Select, Switch, Button } from "antd";
+import { useEffect, useState } from "react";
+import { Button, Col, Form, Input, InputNumber, Modal, Row, Select, Switch } from "antd";
 const { Option } = Select;
 
 // TODO: mandar esto a un archivo dentro /data -> schema.js ?
@@ -108,9 +108,7 @@ const QuoteForm = ({ visible, serviceType, descriptions = {}, onClose, onSubmit 
       closable={false}
     >
       {!showForm ? (
-        <div style={{ whiteSpace: "pre-line", maxHeight: "60vh", overflowY: "auto" }}>
-          {infoText}
-        </div>
+        <div style={{ whiteSpace: "pre-line", maxHeight: "60vh", overflowY: "auto" }}>{infoText}</div>
       ) : (
         <Form form={form} layout="vertical">
           <Row gutter={16}>

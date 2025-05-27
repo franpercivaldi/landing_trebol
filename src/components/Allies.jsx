@@ -1,13 +1,15 @@
-export const Allies = (props) => {
+import alliesData from "../data/alliesData.json";
+
+export const Allies = () => {
   return (
     <div id="allies" className="text-center">
       <div className="container">
         <div className="section-title">
-          <h2>Nuestros aliados</h2>
-          <p>El respaldo de las grandes compañías al servicio de tu seguridad.</p>
+          <h2>{alliesData.title}</h2>
+          <p>{alliesData.intro}</p>
         </div>
         <div className="row allies-list">
-          {props.data.map((d, i) => (
+          {alliesData.allies.map((d, i) => (
             <div key={`${d.name}-${i}`} className="allie">
               <img
                 src={d.icon}

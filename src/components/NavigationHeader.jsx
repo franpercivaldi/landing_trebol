@@ -1,4 +1,5 @@
 import { useState } from "react";
+import navData from "../data/navigationHeaderData.json";
 
 export const NavigationHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,11 +13,11 @@ export const NavigationHeader = () => {
         <button
           type="button"
           className="navbar-toggle"
-          aria-label="Toggle navigation"
+          aria-label={navData.toggleLabel}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((open) => !open)}
         >
-          <span className="sr-only">Toggle navigation</span>
+          <span className="sr-only">{navData.toggleLabel}</span>
           <span className="icon-bar"></span>
           <span className="icon-bar"></span>
           <span className="icon-bar"></span>
@@ -25,51 +26,13 @@ export const NavigationHeader = () => {
           <img src="/img/logo.svg" alt="Logo" className="logo" />
         </a>
         <ul className={`nav navbar-nav navbar-right${menuOpen ? " show" : ""}`}>
-          <li>
-            <a href="#benefits" onClick={handleNavClick}>
-              ¿Por qué elegirnos?
-            </a>
-          </li>
-          <li>
-            <a href="#about-us" onClick={handleNavClick}>
-              Nosotros
-            </a>
-          </li>
-          <li>
-            <a href="#our-services" onClick={handleNavClick}>
-              Servicios
-            </a>
-          </li>
-          <li>
-            <a href="#allies" onClick={handleNavClick}>
-              Aliados
-            </a>
-          </li>
-          {/* <li>
-            <a href="#reviews" onClick={handleNavClick}>
-              Testimonios
-            </a>
-          </li> */}
-          <li>
-            <a href="#team" onClick={handleNavClick}>
-              Equipo
-            </a>
-          </li>
-          <li>
-            <a href="#visit-us" onClick={handleNavClick}>
-              Visitanos
-            </a>
-          </li>
-          <li>
-            <a href="#faq" onClick={handleNavClick}>
-              FAQ
-            </a>
-          </li>
-          <li>
-            <a href="#contact" onClick={handleNavClick}>
-              Contactanos
-            </a>
-          </li>
+          {navData.links.map((link) => (
+            <li key={link.href}>
+              <a href={link.href} onClick={handleNavClick}>
+                {link.label}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>

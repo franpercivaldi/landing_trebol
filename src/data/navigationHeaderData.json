@@ -1,0 +1,13 @@
+{
+  "links": [
+    { "href": "#benefits", "label": "¿Por qué elegirnos?" },
+    { "href": "#about-us", "label": "Nosotros" },
+    { "href": "#our-services", "label": "Servicios" },
+    { "href": "#allies", "label": "Aliados" },
+    { "href": "#team", "label": "Equipo" },
+    { "href": "#visit-us", "label": "Visitanos" },
+    { "href": "#faq", "label": "FAQ" },
+    { "href": "#contact", "label": "Contactanos" }
+  ],
+  "toggleLabel": "Toggle navigation"
+}

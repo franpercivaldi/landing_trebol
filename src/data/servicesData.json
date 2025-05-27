@@ -1,0 +1,51 @@
+{
+  "title": "Nuestros servicios",
+  "intro": "Trabajamos con las mejores aseguradoras del país.",
+  "services": [
+    {
+      "title": "Seguro automotor",
+      "smallImage": "img/our-services/seguroAuto.jpg",
+      "description": "Seguro para una gran variedad de vehículos: autos, pickups, camiones, acoplados y trailers.\nOfrecemos diferentes planes, desde opciones básicas hasta Terceros Completos y Todo Riesgo, diseñados para brindarte la mejor protección y mayor tranquilidad para tu vehículo.\n\nCoberturas:\n• Responsabilidad Civil\n• Servicio de asistencia al vehículo 24/7\n• Robo o Hurto\n• Incendio\n• Daños por accidente\n• Cristales\n• Granizo\n• Cerraduras\n• Daños parciales con franquicias fijas y variables."
+    },
+    {
+      "title": "Seguro para tu moto",
+      "smallImage": "img/our-services/seguroMoto2.webp",
+      "description": "Te ofrecemos seguros de motos que se adaptan a tu estilo de vida. Desde coberturas básicas hasta protección total, cuidamos tu vehículo para que disfrutes cada ruta sin preocupaciones.\n\nCoberturas:\n• Responsabilidad Civil\n• Servicio de asistencia a la moto 24/7\n• Robo o Hurto total\n• Incendio total\n• Daños por accidente"
+    },
+    {
+      "title": "Seguro de bici",
+      "smallImage": "img/our-services/seguroBiciDef.jpg",
+      "description": "Te ofrecemos seguros para bicicletas, no importa si es tu bici urbana para moverte por la ciudad, una mountain bike para la aventura, una de carrera para competir o una eléctrica de última generación. ¡Tenemos el plan perfecto para cuidar tu bici, sin importar su tipo o antigüedad!\n\nCoberturas:\n• Te cubrimos el robo de tu bicicleta o monopatín eléctrico dentro de la República Argentina.\n• Te reembolsamos los gastos de documentos en caso de robo.\n• Daños a terceros."
+    },
+    {
+      "title": "Seguro del Hogar",
+      "smallImage": "img/our-services/seguroHogar.jpg",
+      "description": "Seguridad para tu casa, paz para vos\n\nJunto a aseguradoras líderes, ponemos a tu disposición una completa gama de coberturas para proteger tu casa o departamento, ese lugar donde encontrás tranquilidad y seguridad. No importa si es tu primer hogar, el definitivo, tu vivienda permanente, la casa de fin de semana o incluso una construcción con tu estilo único y no tradicional. ¡Tenemos el seguro ideal para cuidar tu patrimonio más importante!\n\n• Coberturas:\n\nDaños totales y parciales a la vivienda por incendio, explosión o derrumbe.\n• Daños de la naturaleza: por rayo, vientos huracanados, granizo, terremoto, caídas de árboles.\n• Gastos de limpieza y remoción de escombros; alojamiento y mudanza; guardamuebles.\n• Daños al contenido: por incendio, explosión, derrumbe, rayo, robo, hurto, daños eléctricos, daños por intento de robo.\n• Daños a la tecnología: por incendio, rayo, explosión, robo, hurto, daños eléctricos, accidente; inundación.\n• Daños a cristales.\n• Pérdida de alimentos refrigerados.\nAsistencia para tu hogar durante las 24hs, los 365 días del año."
+    },
+    {
+      "title": "Seguro de comercio",
+      "smallImage": "img/our-services/seguroNegocio.jpg",
+      "description": "Te ofrecemos coberturas que protegen tu emprendimiento, sea una tienda, una oficina, una startup o una empresa en crecimiento. No importa el tamaño o el rubro de tu negocio: ¡tenemos el plan perfecto para que trabajes con tranquilidad y te enfoques en lo que importa!\n\nCoberturas básicas\n\n• Incendio Edificio y Contenido.\n• Robo de Contenido y Mercadería.\n• Cristales.\n• Responsabilidad Civil Comprensiva.\n• Asistencia para tu Comercio durante las 24hs, los 365 días del año.\n\nCoberturas opcionales\n\n• Robo de valores en Caja Fuerte y en Tránsito.\n• Seguro Técnico.\n• Daños por agua."
+    },
+    {
+      "title": "Seguro accidentes personales",
+      "smallImage": "img/our-services/seguroSalud.jpg",
+      "description": "Te ofrecemos un seguro de accidentes personales que protege lo que más importa: tu bienestar y el de tu familia. Diseñado para cubrir imprevistos, este seguro te brinda la seguridad que necesitás en tu día a día.\nYa seas autónomo, trabajador informal o simplemente quieras protegerte ante accidentes, nuestro equipo de productores asesores está listo para personalizar una póliza que se adapte a vos.\n\n¿Qué te ofrece nuestro seguro de accidentes personales?\n• Indemnización por accidentes: Compensación económica en caso de lesiones, incapacidad temporal o permanente, o fallecimiento por accidente.\n• Gastos médicos: Cobertura de tratamientos y hospitalización derivados de un accidente, para que recibas la atención necesaria.\n• Flexibilidad total: Adaptamos la póliza a tu estilo de vida, con opciones para individuos, familias o profesionales independientes.\n• Gestión ágil: Te acompañamos con atención 24/7, desde la contratación hasta la resolución de siniestros, con procesos simples y transparentes.\n• Protección integral: Combiná este seguro con otras coberturas, como hogar o vehículo, para una tranquilidad completa."
+    },
+    {
+      "title": "Seguro de caución",
+      "smallImage": "img/our-services/seguroCaucion.jpg",
+      "description": "Cumplí con confianza, tu garantía asegurada\n\nOfrecemos seguros de caución que respaldan tus compromisos comerciales con seguridad y confianza. Ideales para empresas, pymes y profesionales, nuestras pólizas garantizan el cumplimiento de tus contratos.\n\n¿Qué incluye nuestro seguro de caución?\n• Garantías contractuales: Respaldo para licitaciones, contratos de obra o servicios.\n• Alquileres comerciales: Protección para cumplir con contratos de locación sin necesidad de depósitos.\n• Flexibilidad: Planes adaptados a las necesidades de tu negocio, grandes o pequeños.\n• Gestión ágil: Procesos rápidos y simples para que obtengas tu póliza sin demoras.\n• Asesoramiento experto: Nuestro equipo te guía para encontrar la solución ideal."
+    },
+    {
+      "title": "Seguro de viaje",
+      "smallImage": "img/our-services/seguroViajero.jpg",
+      "description": ""
+    },
+    {
+      "title": "Riesgo de trabajo ART",
+      "smallImage": "img/our-services/seguroART.webp",
+      "description": ""
+    }
+  ]
+}

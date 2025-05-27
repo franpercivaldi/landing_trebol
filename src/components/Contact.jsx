@@ -1,15 +1,20 @@
-import emailjs from '@emailjs/browser';
-import { Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { Mail, MapPin, Phone } from "lucide-react";
+import contactData from "../data/contactData.json";
 
 const initialState = {
   name: "",
   email: "",
   message: "",
 };
-
-export const Contact = (props) => {
+export const Contact = () => {
   const [{ name, email, message }, setState] = useState(initialState);
+
+  // Get EmailJS config from environment variables
+  const serviceID = process.env.REACT_APP_SERVICE_ID;
+  const templateID = process.env.REACT_APP_TEMPLATE_ID;
+  const publicKey = process.env.REACT_APP_PUBLIC_KEY;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,12 +26,7 @@ export const Contact = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm(
-        props.data.serviceID,
-        props.data.templateID,
-        e.target,
-        props.data.publicKey
-      )
+      .sendForm(serviceID, templateID, e.target, publicKey)
       .then(() => {
         clearState();
       })
@@ -41,10 +41,8 @@ export const Contact = (props) => {
         <div className="col-md-8">
           <div className="row">
             <div className="section-title">
-              <h2>Contactanos.</h2>
-              <p>
-                Por favor completá el siguiente formulario para enviarnos un mensaje. Te responderemos lo antes posible.
-              </p>
+              <h2>{contactData.title}</h2>
+              <p>{contactData.intro}</p>
             </div>
             <form name="sentMessage" onSubmit={handleSubmit}>
               <div className="row">
@@ -55,7 +53,7 @@ export const Contact = (props) => {
                       id="name"
                       name="name"
                       className="form-control"
-                      placeholder="Nombre"
+                      placeholder={contactData.form.namePlaceholder}
                       required
                       value={name}
                       onChange={handleChange}
@@ -70,7 +68,7 @@ export const Contact = (props) => {
                       id="email"
                       name="email"
                       className="form-control"
-                      placeholder="Email"
+                      placeholder={contactData.form.emailPlaceholder}
                       required
                       value={email}
                       onChange={handleChange}
@@ -85,7 +83,7 @@ export const Contact = (props) => {
                   id="message"
                   className="form-control"
                   rows="4"
-                  placeholder="Mensaje"
+                  placeholder={contactData.form.messagePlaceholder}
                   required
                   value={message}
                   onChange={handleChange}
@@ -93,7 +91,7 @@ export const Contact = (props) => {
               </div>
 
               <button type="submit" className="btn btn-custom btn-lg">
-                Enviar Mail
+                {contactData.form.button}
               </button>
             </form>
           </div>
@@ -101,78 +99,80 @@ export const Contact = (props) => {
 
         <div className="col-md-3 col-md-offset-1 contact-info">
           <div className="contact-item">
-            <h3 className="contact-info-title">Info del contacto</h3>
+            <h3 className="contact-info-title">{contactData.infoTitle}</h3>
           </div>
 
           <div className="contact-item">
             <span className="contact-title">
               <MapPin size={16} />
-              <p className="contact-title-text">Dirección</p>
+              <p className="contact-title-text">{contactData.addressLabel1}</p>
             </span>
-            <p>{props.data.address}</p>
-            <p>Avenida Donato Alvarez 7800, Córdoba, Argentina</p>
+            <a href="https://maps.app.goo.gl/wJWjrzzEJ5u9qdkn8" target="_blank" rel="noopener noreferrer">
+              {contactData.address}
+            </a>
+          </div>
+
+          <div className="contact-item">
+            <span className="contact-title">
+              <MapPin size={16} />
+              <p className="contact-title-text">{contactData.addressLabel2}</p>
+            </span>
+            <a href="https://maps.app.goo.gl/jxygBNgfpXHBd6Gp9" target="_blank" rel="noopener noreferrer">
+              {contactData.secondaryAddress}
+            </a>
           </div>
 
           <div className="contact-item">
             <span className="contact-title">
               <Phone size={16} />
-              <p className="contact-title-text">Celular</p>
+              <p className="contact-title-text">{contactData.phoneLabel1}</p>
             </span>
-            <p>{props.data.phone}</p>
-            <p>+54 9 351 539-2047</p>
+            <a href="tel:+5493512780483">{contactData.phone}</a>
+          </div>
+
+          <div className="contact-item">
+            <span className="contact-title">
+              <Phone size={16} />
+              <p className="contact-title-text">{contactData.phoneLabel2}</p>
+            </span>
+            <a href="tel:+5493515392047">{contactData.secondaryPhone}</a>
           </div>
 
           <div className="contact-item">
             <span className="contact-title">
               <Mail size={16} />
-              <p className="contact-title-text">Email</p>
+              <p className="contact-title-text">{contactData.emailLabel}</p>
             </span>
-            <a
-              href={`mailto:${props.data.email}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {props.data.email}
+            <a href={`mailto:${contactData.email}`} target="_blank" rel="noopener noreferrer">
+              {contactData.email}
             </a>
           </div>
 
           <div className="col-md-12">
             <div className="row social">
               <a
-                href={props.data.facebook.link}
-                aria-label={props.data.facebook.aria}
+                href={contactData.facebook.link}
+                aria-label={contactData.facebook.aria}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src={props.data.facebook.img}
-                  alt={props.data.facebook.aria}
-                  className="social-icon"
-                />
+                <img src={contactData.facebook.img} alt={contactData.facebook.aria} className="social-icon" />
               </a>
               <a
-                href={props.data.instagram.link}
-                aria-label={props.data.instagram.aria}
+                href={contactData.instagram.link}
+                aria-label={contactData.instagram.aria}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src={props.data.instagram.img}
-                  alt={props.data.instagram.aria}
-                  className="social-icon"
-                />
+                <img src={contactData.instagram.img} alt={contactData.instagram.aria} className="social-icon" />
               </a>
               <a
-                href={props.data.whatsapp.link}
-                aria-label={props.data.whatsapp.aria}
+                href={contactData.whatsapp.link}
+                aria-label={contactData.whatsapp.aria}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src={props.data.whatsapp.img}
-                  alt={props.data.whatsapp.aria}
-                  className="social-icon"
-                />
+                <img src={contactData.whatsapp.img} alt={contactData.whatsapp.aria} className="social-icon" />
               </a>
             </div>
           </div>
@@ -200,12 +200,12 @@ export const Contact = (props) => {
         }}
       >
         <img
-          src={props.data.whatsapp.img}
-          alt={props.data.whatsapp.aria}
+          src={contactData.whatsapp.img}
+          alt={contactData.whatsapp.aria}
           style={{
             width: "32px",
             height: "32px",
-            filter: "invert(22%) sepia(85%) saturate(500%) hue-rotate(256deg) brightness(92%) contrast(91%)"
+            filter: "invert(22%) sepia(85%) saturate(500%) hue-rotate(256deg) brightness(92%) contrast(91%)",
           }}
         />
       </a>

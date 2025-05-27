@@ -1,0 +1,13 @@
+{
+  "title": "Nuestros aliados",
+  "intro": "El respaldo de las grandes compañías al servicio de tu seguridad.",
+  "allies": [
+    { "icon": "partners/atm.jpg", "name": "ATM Seguros" },
+    { "icon": "partners/medicar-work.jpg", "name": "MedicarWork" },
+    { "icon": "partners/mercantil-andina.png", "name": "Mercantil Andina" },
+    { "icon": "partners/prudencia-seguros.png", "name": "Prudencia Seguros" },
+    { "icon": "partners/rus.jpg", "name": "Río Uruguay Seguros" },
+    { "icon": "partners/seguro-metal.webp", "name": "Segurometal" },
+    { "icon": "partners/triunfo.jpg", "name": "Triunfo Seguros" }
+  ]
+}

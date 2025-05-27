@@ -1,9 +1,10 @@
 import emailjs from "@emailjs/browser";
-import { useState,useMemo } from "react";
+import { useState, useMemo } from "react";
 import QuoteForm from "./QuoteForm";
 import { ServicesImage } from "./ServicesImage";
+import servicesData from "../data/servicesData.json";
 
-export const Services = ({ data }) => {
+export const Services = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [serviceType, setServiceType] = useState(null);
   const serviceID = process.env.REACT_APP_SERVICE_ID;
@@ -20,14 +21,14 @@ export const Services = ({ data }) => {
   };
 
   const descriptions = useMemo(() => {
-    return data.reduce((acc, item) => {
+    return servicesData.services.reduce((acc, item) => {
       const key = mapTitleToServiceType(item.title);
       if (key && item.description) {
         acc[key] = item.description;
       }
       return acc;
     }, {});
-  }, [data]);
+  }, []);
 
   const openForm = (title) => {
     const type = mapTitleToServiceType(title);
@@ -58,12 +59,12 @@ export const Services = ({ data }) => {
       <div id="our-services" className="text-center">
         <div className="container">
           <div className="section-title">
-            <h2>Nuestros servicios</h2>
-            <p>Trabajamos con las mejores aseguradoras del país.</p>
+            <h2>{servicesData.title}</h2>
+            <p>{servicesData.intro}</p>
           </div>
           <div className="row">
             <div className="our-services-items">
-              {data.map((d) => (
+              {servicesData.services.map((d) => (
                 <div key={d.title} className="col-sm-6 col-md-4 col-lg-4 cursor-pointer" onClick={() => openForm(d.title)}>
                   <ServicesImage title={d.title} smallImage={d.smallImage} />
                 </div>
@@ -73,12 +74,13 @@ export const Services = ({ data }) => {
         </div>
       </div>
 
-      <QuoteForm 
+      <QuoteForm
         visible={modalOpen}
-        serviceType={serviceType}   
-        descriptions={descriptions}  
+        serviceType={serviceType}
+        descriptions={descriptions}
         onClose={() => setModalOpen(false)}
-        onSubmit={handleSubmit} />
+        onSubmit={handleSubmit}
+      />
     </>
   );
 };

@@ -1,0 +1,36 @@
+{
+  "address": "Avenida Bodereau 9498 (local 4 y 5), Córdoba, Argentina",
+  "secondaryAddress": "Avenida Donato Alvarez 7800, Córdoba, Argentina",
+  "phone": "+54 9 351 2780483",
+  "secondaryPhone": "+54 9 351 5392047",
+  "email": "eltrebolseguros@gmail.com",
+  "facebook": {
+    "link": "https://www.facebook.com/eltrebolorganizacion",
+    "aria": "Facebook El Trebol",
+    "img": "/img/contacts/fb.png"
+  },
+  "instagram": {
+    "link": "https://www.instagram.com/eltrebolorganizacion",
+    "aria": "Instagram El Trebol",
+    "img": "/img/contacts/ig.png"
+  },
+  "whatsapp": {
+    "link": "https://wa.me/543512780483?text=Hola%21%20Me%20contacto%20con%20ustedes%20porque%20estoy%20interesado%20en%20",
+    "aria": "WhatsApp El Trebol",
+    "img": "/img/contacts/wsp.png"
+  },
+  "title": "Contactanos.",
+  "intro": "Por favor completá el siguiente formulario para enviarnos un mensaje. Te responderemos lo antes posible.",
+  "form": {
+    "namePlaceholder": "Nombre",
+    "emailPlaceholder": "Email",
+    "messagePlaceholder": "Mensaje",
+    "button": "Enviar Mail"
+  },
+  "infoTitle": "Info del contacto",
+  "addressLabel1": "Dirección Sucursal 1",
+  "addressLabel2": "Dirección Sucursal 2",
+  "phoneLabel1": "Número de Teléfono 1",
+  "phoneLabel2": "Número de Teléfono 2",
+  "emailLabel": "Email"
+}
