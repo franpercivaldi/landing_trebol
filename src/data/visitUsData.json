@@ -1,0 +1,14 @@
+{
+  "title": "Dónde estamos",
+  "intro": "El trato personalizado cara a cara es nuestra especialidad. Si preferís charlar en persona, ¡te esperamos con gusto en nuestra oficina!",
+  "locations": [
+    {
+      "label": "Avenida Bodereau 9498, Córdoba, Argentina",
+      "mapUrl": "https://www.google.com/maps?q=Avenida+Bodereau+9498,+C%C3%B3rdoba,+Argentina&output=embed"
+    },
+    {
+      "label": "Avenida Donato Alvarez 7800, Córdoba, Argentina",
+      "mapUrl": "https://www.google.com/maps?q=Avenida+Donato+Alvarez+7800,+C%C3%B3rdoba,+Argentina&output=embed"
+    }
+  ]
+}

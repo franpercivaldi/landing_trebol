@@ -1,0 +1,25 @@
+{
+  "title": "Beneficios",
+  "benefits": [
+    {
+      "icon": "sield",
+      "title": "Asesoramiento personalizado",
+      "text": "Escuchamos tus necesidades y diseñamos pólizas a medida, asegurándonos de que tengas la cobertura ideal al mejor precio."
+    },
+    {
+      "icon": "clock",
+      "title": "Protección integral",
+      "text": "Desde seguros para tu comercio, consorcio o vehículo hasta ART y asistencia al viajero, cubrimos todos los aspectos de tu vida con las mejores aseguradoras del mercado."
+    },
+    {
+      "icon": "bank",
+      "title": "Confianza y transparencia",
+      "text": "Te explicamos cada detalle de tu póliza sin sorpresas, para que tomes decisiones informadas."
+    },
+    {
+      "icon": "calendar",
+      "title": "Respuesta inmediata",
+      "text": "Estamos a tu lado en cada paso, desde la contratación hasta la gestión de siniestros, con atención 24/7."
+    }
+  ]
+}

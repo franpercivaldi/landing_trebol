@@ -1,6 +1,5 @@
 import { ChevronRight } from "lucide-react";
-import landingPageData from "../data/data.json";
-const { AboutUs: aboutUsData } = landingPageData;
+import aboutUsData from "../data/aboutUsData.json";
 
 export const AboutUs = () => {
   return (
@@ -12,20 +11,19 @@ export const AboutUs = () => {
           </div>
           <div className="col-xs-12 col-md-6">
             <div className="about-us-text">
-              <h2>Quiénes somos</h2>
+              <h2>{aboutUsData.title}</h2>
               <p>{aboutUsData.paragraph}</p>
-
-              <h3>¿Por qué elegirnos?</h3>
+              <h3>{aboutUsData.whyTitle}</h3>
               <div className="row why-choose-us">
                 <div className="col-sm-6 about-list">
-                  {aboutUsData.Why.map((d) => (
+                  {aboutUsData.whyList1.map((d) => (
                     <div className="about-elem" key={d}>
                       <ChevronRight size={16} className="about-arrow" /> {d}
                     </div>
                   ))}
                 </div>
                 <div className="col-sm-6 about-list">
-                  {aboutUsData.Why2.map((d) => (
+                  {aboutUsData.whyList2.map((d) => (
                     <div className="about-elem" key={d}>
                       <ChevronRight size={16} className="about-arrow" /> {d}
                     </div>

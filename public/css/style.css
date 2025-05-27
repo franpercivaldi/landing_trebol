@@ -842,6 +842,7 @@ label {
   background-color: transparent;
   transition: all 0.3s ease;
   filter: invert(1); /* Makes black images white */
+  border-radius: 8px;
 }
 
 #contact .social-icon:hover {

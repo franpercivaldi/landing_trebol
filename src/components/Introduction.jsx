@@ -1,5 +1,4 @@
-import landingPageData from "../data/data.json";
-const { Introduction: introductionData } = landingPageData;
+import introductionData from "../data/introductionData.json";
 
 export const Introduction = () => {
   return (
@@ -11,7 +10,7 @@ export const Introduction = () => {
               <h1 className="main-title">{introductionData.title}</h1>
               <p>{introductionData.paragraph}</p>
               <a href="#benefits" className="btn btn-custom">
-                Saber más
+                {introductionData.button}
               </a>{" "}
             </div>
           </div>

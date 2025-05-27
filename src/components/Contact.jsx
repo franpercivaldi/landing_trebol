@@ -1,8 +1,7 @@
+import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Mail, MapPin, Phone } from "lucide-react";
-import { useState } from "react";
-import landingPageData from "../data/data.json";
-const { Contact: contactData } = landingPageData;
+import contactData from "../data/contactData.json";
 
 const initialState = {
   name: "",
@@ -42,8 +41,8 @@ export const Contact = () => {
         <div className="col-md-8">
           <div className="row">
             <div className="section-title">
-              <h2>Contactanos.</h2>
-              <p>Por favor completá el siguiente formulario para enviarnos un mensaje. Te responderemos lo antes posible.</p>
+              <h2>{contactData.title}</h2>
+              <p>{contactData.intro}</p>
             </div>
             <form name="sentMessage" onSubmit={handleSubmit}>
               <div className="row">
@@ -54,7 +53,7 @@ export const Contact = () => {
                       id="name"
                       name="name"
                       className="form-control"
-                      placeholder="Nombre"
+                      placeholder={contactData.form.namePlaceholder}
                       required
                       value={name}
                       onChange={handleChange}
@@ -69,7 +68,7 @@ export const Contact = () => {
                       id="email"
                       name="email"
                       className="form-control"
-                      placeholder="Email"
+                      placeholder={contactData.form.emailPlaceholder}
                       required
                       value={email}
                       onChange={handleChange}
@@ -84,7 +83,7 @@ export const Contact = () => {
                   id="message"
                   className="form-control"
                   rows="4"
-                  placeholder="Mensaje"
+                  placeholder={contactData.form.messagePlaceholder}
                   required
                   value={message}
                   onChange={handleChange}
@@ -92,7 +91,7 @@ export const Contact = () => {
               </div>
 
               <button type="submit" className="btn btn-custom btn-lg">
-                Enviar Mail
+                {contactData.form.button}
               </button>
             </form>
           </div>
@@ -100,13 +99,13 @@ export const Contact = () => {
 
         <div className="col-md-3 col-md-offset-1 contact-info">
           <div className="contact-item">
-            <h3 className="contact-info-title">Info del contacto</h3>
+            <h3 className="contact-info-title">{contactData.infoTitle}</h3>
           </div>
 
           <div className="contact-item">
             <span className="contact-title">
               <MapPin size={16} />
-              <p className="contact-title-text">Dirección Sucursal 1</p>
+              <p className="contact-title-text">{contactData.addressLabel1}</p>
             </span>
             <a href="https://maps.app.goo.gl/wJWjrzzEJ5u9qdkn8" target="_blank" rel="noopener noreferrer">
               {contactData.address}
@@ -116,7 +115,7 @@ export const Contact = () => {
           <div className="contact-item">
             <span className="contact-title">
               <MapPin size={16} />
-              <p className="contact-title-text">Dirección Sucursal 2</p>
+              <p className="contact-title-text">{contactData.addressLabel2}</p>
             </span>
             <a href="https://maps.app.goo.gl/jxygBNgfpXHBd6Gp9" target="_blank" rel="noopener noreferrer">
               {contactData.secondaryAddress}
@@ -126,7 +125,7 @@ export const Contact = () => {
           <div className="contact-item">
             <span className="contact-title">
               <Phone size={16} />
-              <p className="contact-title-text">Número de Teléfono 1</p>
+              <p className="contact-title-text">{contactData.phoneLabel1}</p>
             </span>
             <a href="tel:+5493512780483">{contactData.phone}</a>
           </div>
@@ -134,7 +133,7 @@ export const Contact = () => {
           <div className="contact-item">
             <span className="contact-title">
               <Phone size={16} />
-              <p className="contact-title-text">Número de Teléfono 2</p>
+              <p className="contact-title-text">{contactData.phoneLabel2}</p>
             </span>
             <a href="tel:+5493515392047">{contactData.secondaryPhone}</a>
           </div>
@@ -142,7 +141,7 @@ export const Contact = () => {
           <div className="contact-item">
             <span className="contact-title">
               <Mail size={16} />
-              <p className="contact-title-text">Email</p>
+              <p className="contact-title-text">{contactData.emailLabel}</p>
             </span>
             <a href={`mailto:${contactData.email}`} target="_blank" rel="noopener noreferrer">
               {contactData.email}
@@ -160,8 +159,8 @@ export const Contact = () => {
                 <img src={contactData.facebook.img} alt={contactData.facebook.aria} className="social-icon" />
               </a>
               <a
-                href={contactData.facebook.link}
-                aria-label={contactData.facebook.aria}
+                href={contactData.instagram.link}
+                aria-label={contactData.instagram.aria}
                 target="_blank"
                 rel="noopener noreferrer"
               >

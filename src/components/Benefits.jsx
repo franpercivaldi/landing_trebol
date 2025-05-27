@@ -1,6 +1,5 @@
 import { Calendar1, Clock, PiggyBank, ShieldPlus } from "lucide-react";
-import landingPageData from "../data/data.json";
-const { Benefits: benefitsData } = landingPageData;
+import benefitsData from "../data/benefitsData.json";
 
 const iconMap = {
   sield: <ShieldPlus size={38} />,
@@ -14,10 +13,10 @@ export const Benefits = () => {
     <div id="benefits" className="text-center">
       <div className="container">
         <div className="col-md-10 col-md-offset-1 section-title">
-          <h2>Beneficios</h2>
+          <h2>{benefitsData.title}</h2>
         </div>
         <div className="benefits-list">
-          {benefitsData.map((d, i) => (
+          {benefitsData.benefits.map((d, i) => (
             <div key={`${d.title}-${i}`} className="col-md-3 benefit">
               <div className="icon-container">{iconMap[d.icon]}</div>
               <h3>{d.title}</h3>

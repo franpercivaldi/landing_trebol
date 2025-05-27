@@ -1,7 +1,5 @@
 import { useState } from "react";
-import landingPageData from "../data/data.json";
-
-const { NavigationHeader: navData } = landingPageData;
+import navData from "../data/navigationHeaderData.json";
 
 export const NavigationHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,11 +13,11 @@ export const NavigationHeader = () => {
         <button
           type="button"
           className="navbar-toggle"
-          aria-label="Toggle navigation"
+          aria-label={navData.toggleLabel}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((open) => !open)}
         >
-          <span className="sr-only">Toggle navigation</span>
+          <span className="sr-only">{navData.toggleLabel}</span>
           <span className="icon-bar"></span>
           <span className="icon-bar"></span>
           <span className="icon-bar"></span>

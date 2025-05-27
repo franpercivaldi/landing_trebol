@@ -1,7 +1,4 @@
-import landingPageData from "../data/data.json";
-const { Reviews: reviewsData } = landingPageData;
-
-export const Reviews = () => {
+export const Reviews = (reviewsData) => {
   return (
     <div id="reviews">
       <div className="container">
