@@ -180,25 +180,7 @@ export const Contact = () => {
       </div>
 
       {/* Botón flotante de WhatsApp */}
-      <a
-        href="https://wa.me/543512780483"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          position: "fixed",
-          width: "80px",
-          height: "80px",
-          bottom: "40px",
-          right: "20px",
-          backgroundColor: "#ffffff",
-          borderRadius: "50%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
-          zIndex: 1000,
-        }}
-      >
+      <a href="https://wa.me/543512780483" target="_blank" rel="noopener noreferrer" className="whatsapp-floating-button">
         <img
           src={contactData.whatsapp.img}
           alt={contactData.whatsapp.aria}

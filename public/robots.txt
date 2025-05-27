@@ -1,3 +1,7 @@
-# https://www.robotstxt.org/robotstxt.html
+# robots.txt para El Trébol Organización
+# Permite el rastreo completo del sitio por todos los bots
 User-agent: *
 Disallow:
+
+# Ubicación del sitemap
+Sitemap: https://eltrebolorganizacion.ar/sitemap.xml

@@ -850,6 +850,28 @@ label {
   filter: invert(0); /* Makes white images black */
 }
 
+.whatsapp-floating-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff77;
+  backdrop-filter: blur(10px);
+  border-radius: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+  z-index: 1000;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.whatsapp-floating-button:hover {
+  background-color: #ffffff;
+  box-shadow: 0 0 16px rgba(0,0,0,0.2);
+  transform: scale(1.05);
+}
 
 /* Footer Section*/
 #footer {
