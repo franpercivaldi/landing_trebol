@@ -12,6 +12,11 @@ const initialState = {
 export const Contact = () => {
   const [{ name, email, message }, setState] = useState(initialState);
 
+  // Get EmailJS config from environment variables
+  const serviceID = process.env.REACT_APP_SERVICE_ID;
+  const templateID = process.env.REACT_APP_TEMPLATE_ID;
+  const publicKey = process.env.REACT_APP_PUBLIC_KEY;
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setState((prevState) => ({ ...prevState, [name]: value }));
@@ -22,7 +27,7 @@ export const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm(props.data.serviceID, props.data.templateID, e.target, props.data.publicKey)
+      .sendForm(serviceID, templateID, e.target, publicKey)
       .then(() => {
         clearState();
       })
@@ -101,23 +106,37 @@ export const Contact = () => {
           <div className="contact-item">
             <span className="contact-title">
               <MapPin size={16} />
-              <p className="contact-title-text">Dirección</p>
+              <p className="contact-title-text">Dirección Sucursal 1</p>
             </span>
             <a href="https://maps.app.goo.gl/wJWjrzzEJ5u9qdkn8" target="_blank" rel="noopener noreferrer">
               {contactData.address}
             </a>
-            <p>{props.data.address}</p>
-            <p>Avenida Donato Alvarez 7800, Córdoba, Argentina</p>
+          </div>
+
+          <div className="contact-item">
+            <span className="contact-title">
+              <MapPin size={16} />
+              <p className="contact-title-text">Dirección Sucursal 2</p>
+            </span>
+            <a href="https://maps.app.goo.gl/jxygBNgfpXHBd6Gp9" target="_blank" rel="noopener noreferrer">
+              {contactData.secondaryAddress}
+            </a>
           </div>
 
           <div className="contact-item">
             <span className="contact-title">
               <Phone size={16} />
-              <p className="contact-title-text">Celular</p>
+              <p className="contact-title-text">Número de Teléfono 1</p>
             </span>
             <a href="tel:+5493512780483">{contactData.phone}</a>
-            <p>{props.data.phone}</p>
-            <p>+54 9 351 539-2047</p>
+          </div>
+
+          <div className="contact-item">
+            <span className="contact-title">
+              <Phone size={16} />
+              <p className="contact-title-text">Número de Teléfono 2</p>
+            </span>
+            <a href="tel:+5493515392047">{contactData.secondaryPhone}</a>
           </div>
 
           <div className="contact-item">
@@ -125,15 +144,20 @@ export const Contact = () => {
               <Mail size={16} />
               <p className="contact-title-text">Email</p>
             </span>
-            <a href={`mailto:${props.data.email}`} target="_blank" rel="noopener noreferrer">
-              {props.data.email}
+            <a href={`mailto:${contactData.email}`} target="_blank" rel="noopener noreferrer">
+              {contactData.email}
             </a>
           </div>
 
           <div className="col-md-12">
             <div className="row social">
-              <a href={props.data.facebook.link} aria-label={props.data.facebook.aria} target="_blank" rel="noopener noreferrer">
-                <img src={props.data.facebook.img} alt={props.data.facebook.aria} className="social-icon" />
+              <a
+                href={contactData.facebook.link}
+                aria-label={contactData.facebook.aria}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={contactData.facebook.img} alt={contactData.facebook.aria} className="social-icon" />
               </a>
               <a
                 href={contactData.facebook.link}
@@ -141,10 +165,15 @@ export const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={props.data.instagram.img} alt={props.data.instagram.aria} className="social-icon" />
+                <img src={contactData.instagram.img} alt={contactData.instagram.aria} className="social-icon" />
               </a>
-              <a href={props.data.whatsapp.link} aria-label={props.data.whatsapp.aria} target="_blank" rel="noopener noreferrer">
-                <img src={props.data.whatsapp.img} alt={props.data.whatsapp.aria} className="social-icon" />
+              <a
+                href={contactData.whatsapp.link}
+                aria-label={contactData.whatsapp.aria}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={contactData.whatsapp.img} alt={contactData.whatsapp.aria} className="social-icon" />
               </a>
             </div>
           </div>
@@ -172,8 +201,8 @@ export const Contact = () => {
         }}
       >
         <img
-          src={props.data.whatsapp.img}
-          alt={props.data.whatsapp.aria}
+          src={contactData.whatsapp.img}
+          alt={contactData.whatsapp.aria}
           style={{
             width: "32px",
             height: "32px",

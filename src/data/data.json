@@ -1,6 +1,6 @@
 {
   "Introduction": {
-    "title": "El trebol organizacion",
+    "title": "El Trébol Organización",
     "paragraph": "Hace más de 15 años ofrecemos el mejor servicio personalizado con el respaldo de las grandes empresas."
   },
   "AboutUs": {
@@ -151,7 +151,9 @@
   ],
   "Contact": {
     "address": "Avenida Bodereau 9498 (local 4 y 5), Córdoba, Argentina",
+    "secondaryAddress": "Avenida Donato Alvarez 7800, Córdoba, Argentina",
     "phone": "+54 9 351 2780483",
+    "secondaryPhone": "+54 9 351 5392047",
     "email": "eltrebolseguros@gmail.com",
     "facebook": {
       "link": "https://www.facebook.com/eltrebolorganizacion",

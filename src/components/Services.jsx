@@ -1,5 +1,5 @@
 import emailjs from "@emailjs/browser";
-import { useState,useMemo } from "react";
+import { useState, useMemo } from "react";
 import QuoteForm from "./QuoteForm";
 import { ServicesImage } from "./ServicesImage";
 import landingPageData from "../data/data.json";
@@ -22,14 +22,14 @@ export const Services = () => {
   };
 
   const descriptions = useMemo(() => {
-    return data.reduce((acc, item) => {
+    return servicesData.reduce((acc, item) => {
       const key = mapTitleToServiceType(item.title);
       if (key && item.description) {
         acc[key] = item.description;
       }
       return acc;
     }, {});
-  }, [data]);
+  }, [servicesData]);
 
   const openForm = (title) => {
     const type = mapTitleToServiceType(title);
@@ -75,12 +75,13 @@ export const Services = () => {
         </div>
       </div>
 
-      <QuoteForm 
+      <QuoteForm
         visible={modalOpen}
-        serviceType={serviceType}   
-        descriptions={descriptions}  
+        serviceType={serviceType}
+        descriptions={descriptions}
         onClose={() => setModalOpen(false)}
-        onSubmit={handleSubmit} />
+        onSubmit={handleSubmit}
+      />
     </>
   );
 };
