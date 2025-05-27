@@ -319,7 +319,7 @@ a:focus,
   user-select: none;
   font-family: var(--font-secondary);
   color: var(--color-white);
-  font-size: 82px;
+  font-size: clamp(32px, 10vw, 82px);
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   margin-top: 0;
@@ -940,6 +940,12 @@ label {
   /* Introduction Section */
   #introduction .intro {
     padding: 0;
+  }
+
+  #introduction .intro h1 {
+    font-size: clamp(32px, 10vw, 82px);
+    line-height: 1.1;
+    word-break: break-word;
   }
 
   #introduction .intro-text {
