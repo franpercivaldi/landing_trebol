@@ -8,7 +8,7 @@ export const Allies = () => {
           <h2>{alliesData.title}</h2>
           <p>{alliesData.intro}</p>
         </div>
-        <div className="row allies-list">
+        <div className="allies-list">
           {alliesData.allies.map((d, i) => (
             <div key={`${d.name}-${i}`} className="allie">
               <img

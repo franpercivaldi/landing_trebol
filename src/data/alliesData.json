@@ -8,6 +8,7 @@
     { "icon": "partners/prudencia-seguros.png", "name": "Prudencia Seguros" },
     { "icon": "partners/rus.jpg", "name": "Río Uruguay Seguros" },
     { "icon": "partners/seguro-metal.webp", "name": "Segurometal" },
-    { "icon": "partners/triunfo.jpg", "name": "Triunfo Seguros" }
+    { "icon": "partners/triunfo.jpg", "name": "Triunfo Seguros" },
+    { "icon": "partners/experta.jpg", "name": "Experta Seguros" }
   ]
 }

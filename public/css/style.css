@@ -433,12 +433,10 @@ a:focus,
   color: var(--color-white);
 }
 #allies .allies-list {
-  gap: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  row-gap: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 40px 0;
 }
 #allies .allies-desc {
   margin: 10px;
