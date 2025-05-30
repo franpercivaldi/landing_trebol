@@ -140,6 +140,11 @@ ol {
 }
 .navbar {
   margin: 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 #menu .logo {
   height: 75px;
@@ -526,7 +531,7 @@ a:focus,
   transition: all 0.5s;
   border-radius: 4px;
 }
-.hover-bg .hover-text > h4 {
+.hover-bg .hover-text > h3 {
   opacity: 0;
   color: var(--color-white);
   -webkit-transform: translateY(100%);
@@ -537,7 +542,7 @@ a:focus,
   font-weight: 500;
   text-transform: uppercase;
 }
-.hover-bg:hover .hover-text > h4 {
+.hover-bg:hover .hover-text > h3 {
   opacity: 1;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -601,7 +606,7 @@ a:focus,
 #team {
   padding: 100px 0;
 }
-#team h4 {
+#team h3 {
   margin: 5px 0;
 }
 #team .feature-title {

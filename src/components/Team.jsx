@@ -31,7 +31,7 @@ export const Team = () => {
               <div className="feature-icon" style={{ marginBottom: "12px" }}>
                 {iconMap[f.icon]}
               </div>
-              <h4 className="feature-title">{f.title}</h4>
+              <h3 className="feature-title">{f.title}</h3>
               <p>{f.description}</p>
             </Col>
           ))}

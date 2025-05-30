@@ -9,6 +9,8 @@ import { Team } from "./components/Team";
 import VisitUs from "./components/VisitUs";
 import FAQ from "./components/FAQ";
 
+document.documentElement.lang = "es";
+
 const App = () => {
   return (
     <div>

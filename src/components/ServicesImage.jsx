@@ -4,7 +4,7 @@ export const ServicesImage = ({ title, largeImage, smallImage }) => {
       <div className="hover-bg">
         <a href={largeImage} title={title}>
           <div className="hover-text">
-            <h4>{title}</h4>
+            <h3>{title}</h3>
           </div>
           <img
             src={smallImage}
