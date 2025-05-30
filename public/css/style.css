@@ -49,6 +49,21 @@
   --font-weight-extrabold: 800;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
+#benefits,
+#about-us,
+#our-services,
+#allies,
+#team,
+#visit-us,
+#faq,
+#contact {
+  scroll-margin-top: 100px;
+}
+
 body,
 html {
   font-family: var(--font-primary);
