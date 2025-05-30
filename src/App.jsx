@@ -1,4 +1,3 @@
-import SmoothScroll from "smooth-scroll";
 import { AboutUs } from "./components/AboutUs";
 import { Allies } from "./components/Allies";
 import { Benefits } from "./components/Benefits";
@@ -9,13 +8,6 @@ import { Services } from "./components/Services";
 import { Team } from "./components/Team";
 import VisitUs from "./components/VisitUs";
 import FAQ from "./components/FAQ";
-
-export const scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 1000,
-  speedAsDuration: true,
-  offset: 100, // Height of the fixed header
-  easing: "easeInOutCubic",
-});
 
 const App = () => {
   return (
