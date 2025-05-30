@@ -304,7 +304,7 @@ a:focus,
   display: table;
   width: 100%;
   padding: 0;
-  background: url(../img/intro-bg.jpg) center center no-repeat;
+  background: url(../img/intro-bg.webp) center center no-repeat;
   background-color: var(--color-grey-light);
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -854,8 +854,7 @@ label {
   right: 30px;
   width: 80px;
   height: 80px;
-  background-color: #ffffff77;
-  backdrop-filter: blur(10px);
+  background-color: white;
   border-radius: 1000px;
   display: flex;
   align-items: center;
@@ -866,7 +865,7 @@ label {
 }
 
 .whatsapp-floating-button:hover {
-  background-color: #ffffff;
+  background-color: #d8f8e4;
   box-shadow: 0 0 16px rgba(0,0,0,0.2);
   transform: scale(1.05);
 }
