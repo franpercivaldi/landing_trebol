@@ -2,7 +2,7 @@ export const ServicesImage = ({ title, largeImage, smallImage }) => {
   return (
     <div className="our-services-item">
       <div className="hover-bg">
-        <a href={largeImage} title={title}>
+        <div href={largeImage} title={title}>
           <div className="hover-text">
             <h3>{title}</h3>
           </div>
@@ -17,7 +17,7 @@ export const ServicesImage = ({ title, largeImage, smallImage }) => {
               borderRadius: "6px",
             }}
           />
-        </a>
+        </div>
       </div>
     </div>
   );
