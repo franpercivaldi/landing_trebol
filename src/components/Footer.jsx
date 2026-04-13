@@ -1,16 +1,34 @@
 const Footer = () => {
   return (
-    <footer className="flex h-[68px] items-center justify-center border-t border-gray-100/10 bg-neutral-950 px-4 text-sm text-gray-300">
-      <p className="text-center">
-        Made by{" "}
+    <footer
+      style={{
+        height: "68px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "0 16px",
+        boxSizing: "border-box",
+        borderTop: "1px solid rgba(243, 244, 246, 0.18)",
+        backgroundColor: "#202122",
+        color: "#d1d5db",
+        fontSize: "14px",
+      }}
+    >
+      <p style={{ margin: 0, textAlign: "center" }}>
+        Site built with ❤️ by{" "}
         <a
           href="https://bozziware.vercel.app/"
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center hover:opacity-90"
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            textDecoration: "none",
+            color: "inherit",
+          }}
         >
           <span style={{ fontFamily: '"JetBrains Mono", monospace' }}>
-            <span className="text-white">bozziware</span>
+            <span style={{ color: "#ffffff" }}>bozziware</span>
             <span style={{ color: "rgb(53, 212, 119)" }}>_</span>
           </span>
         </a>
