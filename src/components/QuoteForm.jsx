@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Button, Col, Form, Input, InputNumber, Modal, Row, Select, Switch } from "antd";
-import { BadgeCheck, ClipboardList } from "lucide-react";
 const { Option } = Select;
 
 // TODO: mandar esto a un archivo dentro /data -> schema.js ?
@@ -56,7 +55,6 @@ const QuoteForm = ({ visible, serviceType, descriptions = {}, onClose, onSubmit 
     // Reset to info view when modal is opened
     if (visible) {
       setShowForm(false);
-      form.resetFields();
     }
   }, [visible, form]);
 
@@ -75,7 +73,9 @@ const QuoteForm = ({ visible, serviceType, descriptions = {}, onClose, onSubmit 
   };
 
   const handleClose = () => {
-    form.resetFields();
+    if (showForm) {
+      form.resetFields();
+    }
     setShowForm(false);
     onClose();
   };
@@ -100,34 +100,22 @@ const QuoteForm = ({ visible, serviceType, descriptions = {}, onClose, onSubmit 
 
   return (
     <Modal
-      className="quote-modal"
-      wrapClassName="quote-modal-wrap"
-      title={
-        <div className="quote-modal-title">
-          <span className="quote-modal-mark"><ClipboardList size={18} /></span>
-          <span>{showForm ? "Solicitar cotización" : "Información del servicio"}</span>
-        </div>
-      }
+      title={showForm ? "Solicitar cotización" : "Información del servicio"}
       open={visible}
       onCancel={handleClose}
       footer={footerButtons}
       width={700}
       centered
+      closable={false}
+      className="quote-modal"
+      wrapClassName="quote-modal-wrap"
     >
-      {!showForm && (
-        <div className="quote-info-view">
-          <div className="quote-info-icon"><ClipboardList size={26} /></div>
-          <div className="quote-info-copy">
-            <span className="quote-info-kicker">Una cobertura pensada para vos</span>
-            <div className="quote-info-text">{infoText}</div>
-          </div>
-          <div className="quote-trust-note">
-            <BadgeCheck size={18} />
-            <span>Te asesoramos para encontrar la opción más conveniente.</span>
-          </div>
+      {!showForm ? (
+        <div className="quote-info-text" style={{ whiteSpace: "pre-line", maxHeight: "60vh", overflowY: "auto" }}>
+          {infoText}
         </div>
-      )}
-      <Form form={form} layout="vertical" className={`quote-form${showForm ? "" : " quote-form-hidden"}`}>
+      ) : (
+        <Form form={form} layout="vertical">
           <Row gutter={16}>
             {fields.map((field) => {
               const colSpan = field.type === "textarea" ? 24 : 12;
@@ -148,7 +136,7 @@ const QuoteForm = ({ visible, serviceType, descriptions = {}, onClose, onSubmit 
                   inputNode = <Input.TextArea rows={4} />;
                   break;
                 case "number":
-                  inputNode = <InputNumber />;
+                  inputNode = <InputNumber style={{ width: "100%" }} />;
                   break;
                 case "switch":
                   inputNode = <Switch checkedChildren="Si" unCheckedChildren="No" />;
@@ -170,7 +158,8 @@ const QuoteForm = ({ visible, serviceType, descriptions = {}, onClose, onSubmit 
               );
             })}
           </Row>
-      </Form>
+        </Form>
+      )}
     </Modal>
   );
 };

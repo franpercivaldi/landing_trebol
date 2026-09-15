@@ -14,19 +14,17 @@ document.documentElement.lang = "es";
 
 const App = () => {
   return (
-    <div className="app-shell">
+    <div>
       <NavigationHeader />
-      <main>
-        <Introduction />
-        <Benefits />
-        <AboutUs />
-        <Services />
-        <Allies />
-        <Team />
-        <VisitUs />
-        <FAQ />
-        <Contact />
-      </main>
+      <Introduction />
+      <Benefits />
+      <AboutUs />
+      <Services />
+      <Allies />
+      <Team />
+      <VisitUs />
+      <FAQ />
+      <Contact />
       <Footer />
     </div>
   );

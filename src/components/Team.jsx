@@ -1,11 +1,12 @@
 import teamData from "../data/teamData.json";
+import { Col, Row } from "antd";
 import { Clock, ShieldCheck, UserRound, Users } from "lucide-react";
 
 const iconMap = {
-  ShieldCheck: <ShieldCheck />,
-  Users: <Users />,
-  Clock: <Clock />,
-  UserRound: <UserRound />,
+  ShieldCheck: <ShieldCheck size={64} color="#d745df" />,
+  Users: <Users size={64} color="#d745df" />,
+  Clock: <Clock size={64} color="#d745df" />,
+  UserRound: <UserRound size={64} color="#d745df" />,
 };
 
 function boldSubstring(text, substring) {
@@ -18,28 +19,24 @@ function boldSubstring(text, substring) {
 
 export const Team = () => {
   return (
-    <section id="team" className="section team-section">
-      <div className="site-container">
-        <div className="section-heading section-heading-centered">
-          <span className="section-kicker">Siempre del mismo lado</span>
+    <div id="team" className="text-center">
+      <div className="container">
+        <div className="col-md-8 col-md-offset-2 section-title">
           <h2>{teamData.title}</h2>
           <p>{boldSubstring(teamData.intro, "15 años de experiencia")}</p>
         </div>
-        <div className="team-grid">
+        <Row gutter={[16, 16]}>
           {teamData.features.map((f, i) => (
-            <article key={i} className="team-card">
-              <div className="team-card-top">
-                <span className="team-number">0{i + 1}</span>
-                <div className="feature-icon">
+            <Col key={i} xs={24} sm={12} md={6} className="team-feature">
+              <div className="feature-icon" style={{ marginBottom: "12px" }}>
                 {iconMap[f.icon]}
-                </div>
               </div>
               <h3 className="feature-title">{f.title}</h3>
               <p>{f.description}</p>
-            </article>
+            </Col>
           ))}
-        </div>
+        </Row>
       </div>
-    </section>
+    </div>
   );
 };
