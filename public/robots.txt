@@ -4,4 +4,4 @@ User-agent: *
 Disallow:
 
 # Ubicación del sitemap
-Sitemap: https://eltrebolorganizacion.ar/sitemap.xml
+Sitemap: https://eltrebolseguros.site/sitemap.xml
