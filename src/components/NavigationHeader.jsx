@@ -8,6 +8,15 @@ export const NavigationHeader = () => {
   // Close menu on navigation (mobile UX)
   const handleNavClick = () => setMenuOpen(false);
 
+  useEffect(() => {
+    const handleEscape = (event) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, []);
+
   // Handle link clicks with native smooth scroll
   const handleLinkClick = (href) => (e) => {
     e.preventDefault();
@@ -25,43 +34,52 @@ export const NavigationHeader = () => {
   useEffect(() => {
     const sections = navData.links.map((link) => document.getElementById(link.href.slice(1))).filter(Boolean);
 
-    const observerOptions = {
-      root: null,
-      rootMargin: "0px 0px -60% 0px", // trigger when section enters view
-      threshold: 0,
+    const updateActiveSection = () => {
+      const scrollPosition = window.scrollY + window.innerHeight * 0.35;
+      let currentSection = "";
+
+      sections.forEach((section) => {
+        if (section.offsetTop <= scrollPosition) currentSection = `#${section.id}`;
+      });
+
+      setActiveSection(currentSection);
     };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(`#${entry.target.id}`);
-        }
-      });
-    }, observerOptions);
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
 
-    sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
   }, []);
 
   return (
-    <nav id="menu" className="navbar navbar-default">
-      <div className="header-container">
+    <nav id="menu" className={`site-header${menuOpen ? " is-open" : ""}`} aria-label="Navegación principal">
+      <div className="site-container header-container">
+        <a href="#introduction" className="brand-lockup" onClick={handleLinkClick("#introduction")}>
+          <span className="brand-logo">
+            <img src="/img/logo.svg" alt="El Trébol Organización" className="logo" />
+          </span>
+          <span className="brand-copy">
+            <strong>El Trébol</strong>
+            <small>Organización</small>
+          </span>
+        </a>
         <button
           type="button"
           className="navbar-toggle"
-          aria-label={navData.toggleLabel}
+          aria-label={menuOpen ? "Cerrar navegación" : "Abrir navegación"}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((open) => !open)}
         >
-          <span className="sr-only">{navData.toggleLabel}</span>
+          <span className="sr-only">{menuOpen ? "Cerrar navegación" : navData.toggleLabel}</span>
           <span className="icon-bar"></span>
           <span className="icon-bar"></span>
           <span className="icon-bar"></span>
         </button>
-        <a href="#introduction" onClick={handleLinkClick("#introduction")}>
-          <img src="/img/logo.svg" alt="Logo" className="logo" />
-        </a>
-        <ul className={`nav navbar-nav navbar-right${menuOpen ? " show" : ""}`}>
+        <ul className="site-nav">
           {navData.links.map((link) => (
             <li key={link.href} className={activeSection === link.href ? "active" : ""}>
               <a href={link.href} onClick={handleLinkClick(link.href)}>

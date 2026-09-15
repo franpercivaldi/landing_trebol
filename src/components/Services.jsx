@@ -4,21 +4,21 @@ import QuoteForm from "./QuoteForm";
 import { ServicesImage } from "./ServicesImage";
 import servicesData from "../data/servicesData.json";
 
+const mapTitleToServiceType = (title) => {
+  if (/automotor|taxi/i.test(title)) return "vehiculo";
+  if (/monopatin/i.test(title)) return "monopatin";
+  if (/moto/i.test(title)) return "moto";
+  if (/bici/i.test(title)) return "bici";
+  if (/hogar|comercio/i.test(title)) return "inmueble";
+  return null;
+};
+
 export const Services = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [serviceType, setServiceType] = useState(null);
   const serviceID = process.env.REACT_APP_SERVICE_ID;
   const templateID = process.env.REACT_APP_TEMPLATE_ID;
   const publicKey = process.env.REACT_APP_PUBLIC_KEY;
-
-  const mapTitleToServiceType = (title) => {
-    if (/automotor|taxi/i.test(title)) return "vehiculo";
-    if (/monopatin/i.test(title)) return "monopatin";
-    if (/moto/i.test(title)) return "moto";
-    if (/bici/i.test(title)) return "bici";
-    if (/hogar|comercio/i.test(title)) return "inmueble";
-    return null;
-  };
 
   const descriptions = useMemo(() => {
     return servicesData.services.reduce((acc, item) => {
@@ -56,23 +56,30 @@ export const Services = () => {
 
   return (
     <>
-      <div id="our-services" className="text-center">
-        <div className="container">
-          <div className="section-title">
-            <h2>{servicesData.title}</h2>
-            <p>{servicesData.intro}</p>
-          </div>
-          <div className="row">
-            <div className="our-services-items">
-              {servicesData.services.map((d) => (
-                <div key={d.title} className="col-sm-6 col-md-4 col-lg-4 cursor-pointer" onClick={() => openForm(d.title)}>
-                  <ServicesImage title={d.title} smallImage={d.smallImage} />
-                </div>
-              ))}
+      <section id="our-services" className="section services-section">
+        <div className="site-container">
+          <div className="section-heading section-heading-left services-heading">
+            <div>
+              <span className="section-kicker">Coberturas para tu mundo</span>
+              <h2>{servicesData.title}</h2>
+              <p>{servicesData.intro}</p>
             </div>
+            <span className="services-heading-note">Elegí una opción y conocé tu cobertura</span>
+          </div>
+          <div className="services-grid">
+            {servicesData.services.map((d, i) => (
+              <ServicesImage
+                key={d.title}
+                title={d.title}
+                smallImage={d.smallImage}
+                index={i}
+                isActionable={Boolean(mapTitleToServiceType(d.title))}
+                onClick={() => openForm(d.title)}
+              />
+            ))}
           </div>
         </div>
-      </div>
+      </section>
 
       <QuoteForm
         visible={modalOpen}

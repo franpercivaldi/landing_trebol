@@ -1,39 +1,41 @@
-import { ChevronRight } from "lucide-react";
+import { Check } from "lucide-react";
 import aboutUsData from "../data/aboutUsData.json";
 
 export const AboutUs = () => {
+  const reasons = [...aboutUsData.whyList1, ...aboutUsData.whyList2];
+
   return (
-    <div id="about-us">
-      <div className="container">
-        <div className="row">
-          <div className="col-xs-12 col-md-6">
-            <img src="img/quienesSomos.avif" className="img-responsive" alt="Sobre nosotros" />
+    <section id="about-us" className="section about-section">
+      <div className="site-container about-grid">
+        <div className="about-visual">
+          <div className="about-visual-glow" aria-hidden="true" />
+          <div className="about-image-frame">
+            <img src="/img/quienesSomos.avif" alt="Equipo de El Trébol Organización" />
           </div>
-          <div className="col-xs-12 col-md-6">
-            <div className="about-us-text">
-              <h2>{aboutUsData.title}</h2>
-              <p>{aboutUsData.paragraph}</p>
-              <h3>{aboutUsData.whyTitle}</h3>
-              <div className="row why-choose-us">
-                <div className="col-sm-6 about-list">
-                  {aboutUsData.whyList1.map((d) => (
-                    <div className="about-elem" key={d}>
-                      <ChevronRight size={16} className="about-arrow" /> {d}
-                    </div>
-                  ))}
+          <div className="about-stat">
+            <strong>15+</strong>
+            <span>años cuidando a los nuestros</span>
+          </div>
+        </div>
+        <div className="about-content">
+          <div className="section-heading section-heading-left">
+            <span className="section-kicker">Cercanía que se nota</span>
+            <h2>{aboutUsData.title}</h2>
+            <p>{aboutUsData.paragraph}</p>
+          </div>
+          <div className="about-reasons">
+            <h3>{aboutUsData.whyTitle}</h3>
+            <div className="reason-grid">
+              {reasons.map((reason) => (
+                <div className="about-elem" key={reason}>
+                  <span className="about-check"><Check size={15} /></span>
+                  <span>{reason}</span>
                 </div>
-                <div className="col-sm-6 about-list">
-                  {aboutUsData.whyList2.map((d) => (
-                    <div className="about-elem" key={d}>
-                      <ChevronRight size={16} className="about-arrow" /> {d}
-                    </div>
-                  ))}
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
