@@ -1,40 +1,52 @@
-const Footer = () => {
+import { branches, contact, nav } from "../content";
+import { scrollToHash } from "../lib/smoothScroll";
+import { CloverMark } from "./CloverMark";
+
+export const Footer = () => {
+  const go = (href) => (e) => {
+    e.preventDefault();
+    scrollToHash(href);
+  };
+
   return (
-    <footer
-      style={{
-        height: "68px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: "0 16px",
-        boxSizing: "border-box",
-        borderTop: "1px solid rgba(243, 244, 246, 0.18)",
-        backgroundColor: "#202122",
-        color: "#d1d5db",
-        fontSize: "14px",
-      }}
-    >
-      <p style={{ margin: 0, textAlign: "center" }}>
-        Site built with ❤️ by{" "}
-        <a
-          href="https://bozziware.vercel.app/"
-          target="_blank"
-          rel="noreferrer"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            textDecoration: "none",
-            color: "inherit",
-          }}
-        >
-          <span style={{ fontFamily: '"JetBrains Mono", monospace' }}>
-            <span style={{ color: "#ffffff" }}>bozziware</span>
-            <span style={{ color: "rgb(53, 212, 119)" }}>_</span>
-          </span>
-        </a>
-      </p>
+    <footer className="footer">
+      <div className="container footer__grid">
+        <div className="footer__brand">
+          <CloverMark className="footer__mark" />
+          <p>
+            El Trébol Organización
+            <br />
+            Productores asesores de seguros en Córdoba.
+          </p>
+        </div>
+
+        <nav className="footer__col" aria-label="Secciones">
+          {nav.map((l) => (
+            <a key={l.href} href={l.href} onClick={go(l.href)}>
+              {l.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="footer__col">
+          {branches.map((b) => (
+            <p key={b.name}>
+              {b.address}, {b.city}
+            </p>
+          ))}
+          <a href={`mailto:${contact.email}`}>{contact.email}</a>
+        </div>
+      </div>
+
+      <div className="container footer__bottom">
+        <p>© {new Date().getFullYear()} El Trébol Organización</p>
+        <p>
+          Sitio hecho por{" "}
+          <a href="https://bozziware.vercel.app/" target="_blank" rel="noreferrer">
+            bozziware
+          </a>
+        </p>
+      </div>
     </footer>
   );
 };
-
-export default Footer;

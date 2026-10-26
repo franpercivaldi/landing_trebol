@@ -1,195 +1,131 @@
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
-import { Mail, MapPin, Phone } from "lucide-react";
-import contactData from "../data/contactData.json";
+import { LoaderCircle, Mail, Phone } from "lucide-react";
+import { contact, services, whatsappLink } from "../content";
+import { sendContact } from "../lib/email";
+import { FacebookIcon, InstagramIcon, WhatsAppIcon } from "./icons";
 
-const initialState = {
-  name: "",
-  email: "",
-  message: "",
-};
 export const Contact = () => {
-  const [{ name, email, message }, setState] = useState(initialState);
-
-  // Get EmailJS config from environment variables
-  const serviceID = process.env.REACT_APP_SERVICE_ID;
-  const templateID = process.env.REACT_APP_TEMPLATE_ID;
-  const publicKey = process.env.REACT_APP_PUBLIC_KEY;
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setState((prevState) => ({ ...prevState, [name]: value }));
-  };
-
-  const clearState = () => setState({ ...initialState });
+  const [status, setStatus] = useState("idle");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(serviceID, templateID, e.target, publicKey)
+    const form = e.target;
+    setStatus("sending");
+    sendContact(Object.fromEntries(new FormData(form)))
       .then(() => {
-        clearState();
+        form.reset();
+        setStatus("sent");
       })
-      .catch((error) => {
-        console.log(error.text);
-      });
+      .catch(() => setStatus("error"));
   };
 
   return (
-    <div id="contact">
-      <div className="container container-block">
-        <div className="col-md-8">
-          <div className="row">
-            <div className="section-title">
-              <h2>{contactData.title}</h2>
-              <p>{contactData.intro}</p>
-            </div>
-            <form name="sentMessage" onSubmit={handleSubmit}>
-              <div className="row">
-                <div className="col-md-6">
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      className="form-control"
-                      placeholder={contactData.form.namePlaceholder}
-                      required
-                      value={name}
-                      onChange={handleChange}
-                    />
-                  </div>
-                </div>
+    <section className="contact" id="contacto" aria-labelledby="contact-title">
+      <div className="container contact__grid">
+        <div className="contact__intro">
+          <h2 id="contact-title" className="contact__title">
+            Hablemos de tu seguro
+          </h2>
+          <p className="contact__lead">
+            Dejanos tu consulta y te respondemos a la brevedad. Si es urgente, escribinos directo por WhatsApp.
+          </p>
 
-                <div className="col-md-6">
-                  <div className="form-group">
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="form-control"
-                      placeholder={contactData.form.emailPlaceholder}
-                      required
-                      value={email}
-                      onChange={handleChange}
-                    />
-                  </div>
-                </div>
-              </div>
+          <ul className="channels">
+            <li>
+              <a href={whatsappLink()} target="_blank" rel="noopener noreferrer">
+                <WhatsAppIcon width={20} height={20} />
+                <span>
+                  WhatsApp
+                  <small>{contact.phones[0].label}</small>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href={contact.phones[1].href}>
+                <Phone size={20} aria-hidden="true" />
+                <span>
+                  Teléfono
+                  <small>{contact.phones[1].label}</small>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href={`mailto:${contact.email}`}>
+                <Mail size={20} aria-hidden="true" />
+                <span>
+                  Email
+                  <small>{contact.email}</small>
+                </span>
+              </a>
+            </li>
+          </ul>
 
-              <div className="form-group">
-                <textarea
-                  name="message"
-                  id="message"
-                  className="form-control"
-                  rows="4"
-                  placeholder={contactData.form.messagePlaceholder}
-                  required
-                  value={message}
-                  onChange={handleChange}
-                />
-              </div>
-
-              <button type="submit" className="btn btn-custom btn-lg">
-                {contactData.form.button}
-              </button>
-            </form>
+          <div className="socials">
+            <a href={contact.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram de El Trébol">
+              <InstagramIcon width={20} height={20} />
+            </a>
+            <a href={contact.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook de El Trébol">
+              <FacebookIcon width={20} height={20} />
+            </a>
           </div>
         </div>
 
-        <div className="col-md-3 col-md-offset-1 contact-info">
-          <div className="contact-item">
-            <h3 className="contact-info-title">{contactData.infoTitle}</h3>
-          </div>
-
-          <div className="contact-item">
-            <span className="contact-title">
-              <MapPin size={16} />
-              <p className="contact-title-text">{contactData.addressLabel1}</p>
-            </span>
-            <a href="https://maps.app.goo.gl/wJWjrzzEJ5u9qdkn8" target="_blank" rel="noopener noreferrer">
-              {contactData.address}
-            </a>
-          </div>
-
-          <div className="contact-item">
-            <span className="contact-title">
-              <MapPin size={16} />
-              <p className="contact-title-text">{contactData.addressLabel2}</p>
-            </span>
-            <a href="https://maps.app.goo.gl/jxygBNgfpXHBd6Gp9" target="_blank" rel="noopener noreferrer">
-              {contactData.secondaryAddress}
-            </a>
-          </div>
-
-          <div className="contact-item">
-            <span className="contact-title">
-              <Phone size={16} />
-              <p className="contact-title-text">{contactData.phoneLabel1}</p>
-            </span>
-            <a href="tel:+5493512780483">{contactData.phone}</a>
-          </div>
-
-          <div className="contact-item">
-            <span className="contact-title">
-              <Phone size={16} />
-              <p className="contact-title-text">{contactData.phoneLabel2}</p>
-            </span>
-            <a href="tel:+5493515392047">{contactData.secondaryPhone}</a>
-          </div>
-
-          <div className="contact-item">
-            <span className="contact-title">
-              <Mail size={16} />
-              <p className="contact-title-text">{contactData.emailLabel}</p>
-            </span>
-            <a href={`mailto:${contactData.email}`} target="_blank" rel="noopener noreferrer">
-              {contactData.email}
-            </a>
-          </div>
-
-          <div className="col-md-12">
-            <div className="row social">
-              <a
-                href={contactData.facebook.link}
-                aria-label={contactData.facebook.aria}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src={contactData.facebook.img} alt={contactData.facebook.aria} className="social-icon" />
-              </a>
-              <a
-                href={contactData.instagram.link}
-                aria-label={contactData.instagram.aria}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src={contactData.instagram.img} alt={contactData.instagram.aria} className="social-icon" />
-              </a>
-              <a
-                href={contactData.whatsapp.link}
-                aria-label={contactData.whatsapp.aria}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src={contactData.whatsapp.img} alt={contactData.whatsapp.aria} className="social-icon" />
-              </a>
+        <form className="contact__form" onSubmit={handleSubmit}>
+          <div className="fields">
+            <div className="field">
+              <label htmlFor="contact-name">Nombre</label>
+              <input id="contact-name" name="name" autoComplete="name" required />
+            </div>
+            <div className="field">
+              <label htmlFor="contact-phone">
+                Teléfono <span className="field__optional">(opcional)</span>
+              </label>
+              <input id="contact-phone" name="phone" type="tel" autoComplete="tel" />
+            </div>
+            <div className="field field--wide">
+              <label htmlFor="contact-email">Email</label>
+              <input id="contact-email" name="email" type="email" autoComplete="email" required />
+            </div>
+            <div className="field field--wide">
+              <label htmlFor="contact-topic">¿Sobre qué es tu consulta?</label>
+              <select id="contact-topic" name="topic" defaultValue="">
+                <option value="">Consulta general</option>
+                {services.map((s) => (
+                  <option key={s.id} value={s.title}>
+                    {s.title}
+                  </option>
+                ))}
+                <option value="Siniestro">Tengo un siniestro</option>
+              </select>
+            </div>
+            <div className="field field--wide">
+              <label htmlFor="contact-message">Mensaje</label>
+              <textarea id="contact-message" name="message" rows={4} required />
             </div>
           </div>
-        </div>
+
+          {status === "sent" && (
+            <p className="form-success" role="status">
+              Mensaje enviado. Te respondemos por email o por teléfono.
+            </p>
+          )}
+          {status === "error" && (
+            <p className="form-error" role="alert">
+              No se pudo enviar el mensaje. Intentá de nuevo o escribinos a {contact.email}.
+            </p>
+          )}
+
+          <button type="submit" className="btn btn--light" disabled={status === "sending"}>
+            {status === "sending" ? (
+              <>
+                <LoaderCircle className="spin" size={18} aria-hidden="true" /> Enviando…
+              </>
+            ) : (
+              "Enviar consulta"
+            )}
+          </button>
+        </form>
       </div>
-
-      {/* Botón flotante de WhatsApp */}
-      <a href="https://wa.me/543512780483" target="_blank" rel="noopener noreferrer" className="whatsapp-floating-button">
-        <img
-          src={contactData.floatingButton.img}
-          alt={contactData.floatingButton.aria}
-          style={{
-            width: "32px",
-            height: "32px",
-          }}
-        />
-      </a>
-    </div>
+    </section>
   );
 };

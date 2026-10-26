@@ -1,32 +1,40 @@
-import { AboutUs } from "./components/AboutUs";
-import { Allies } from "./components/Allies";
-import { Benefits } from "./components/Benefits";
+import { useEffect } from "react";
+import { About } from "./components/About";
+import { Branches } from "./components/Branches";
 import { Contact } from "./components/Contact";
-import Footer from "./components/Footer";
-import { Introduction } from "./components/Introduction";
-import { NavigationHeader } from "./components/NavigationHeader";
-import { Services } from "./components/Services";
-import { Team } from "./components/Team";
-import VisitUs from "./components/VisitUs";
-import FAQ from "./components/FAQ";
-
-document.documentElement.lang = "es";
+import { Coverages } from "./components/Coverages";
+import { Faq } from "./components/Faq";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+import { Hero } from "./components/Hero";
+import { Insurers } from "./components/Insurers";
+import { Process } from "./components/Process";
+import { QuoteProvider } from "./components/QuoteDrawer";
+import { WhatsAppButton } from "./components/WhatsAppButton";
+import { startSmoothScroll } from "./lib/smoothScroll";
 
 const App = () => {
+  useEffect(() => startSmoothScroll(), []);
+
   return (
-    <div>
-      <NavigationHeader />
-      <Introduction />
-      <Benefits />
-      <AboutUs />
-      <Services />
-      <Allies />
-      <Team />
-      <VisitUs />
-      <FAQ />
-      <Contact />
+    <QuoteProvider>
+      <a className="skip-link" href="#coberturas">
+        Ir al contenido
+      </a>
+      <Header />
+      <main>
+        <Hero />
+        <Insurers />
+        <Coverages />
+        <Process />
+        <About />
+        <Branches />
+        <Faq />
+        <Contact />
+      </main>
       <Footer />
-    </div>
+      <WhatsAppButton />
+    </QuoteProvider>
   );
 };
 
