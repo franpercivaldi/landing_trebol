@@ -1,0 +1,16 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "eltrebolseguros.site" }],
+      "destination": "https://www.eltrebolorganizacion.ar/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.eltrebolseguros.site" }],
+      "destination": "https://www.eltrebolorganizacion.ar/:path*",
+      "statusCode": 301
+    }
+  ]
+}
